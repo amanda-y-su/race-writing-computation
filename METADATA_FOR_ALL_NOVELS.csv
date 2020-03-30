@@ -1,0 +1,625 @@
+,auth_first,auth_last,book_id,category,gender,publ_date,race,title,textlength
+1,Henry,James,37,w,M,1880,Caucasian,Confidence,421876
+2,Henry,James,38,w,M,1880,Caucasian,A bundle of letters,75674
+3,Henry,James,39,w,M,1880,Caucasian,The diary of a man of fifty,64615
+4,William Dean,Howells,80,w,M,1881,Caucasian,A modern instance,843425
+5,William Dean,Howells,83,w,M,1881,Caucasian,A chance acquaintance,336326
+6,Henry,James,86,w,M,1881,Caucasian,The portrait of a lady,656822
+7,Mark,Twain,107,w,M,1881,Caucasian,The prince and the pauper,387930
+8,Henry,James,130,w,M,1882,Caucasian,Roderick Hudson,739712
+9,Joel Chandler,Harris,183,w,M,1883,Caucasian,Nights with Uncle Remus,564470
+10,Edward,Bellamy,221,w,M,1884,Caucasian,Miss Ludington's sister,237280
+11,Joel Chandler,Harris,241,w,M,1884,Caucasian,Mingo,250651
+12,Bret,Harte,243,w,M,1884,Caucasian,In the Carquinez woods,217975
+13,Bret,Harte,244,w,M,1884,Caucasian,On the frontier,254276
+14,Sarah Orne,Jewett,253,w,F,1884,Caucasian,A country doctor,784297
+15,Bret,Harte,309,w,M,1885,Caucasian,By shore and sedge,235457
+16,Bret,Harte,310,w,M,1885,Caucasian,Maruja,241455
+17,Henry,James,381,w,M,1886,Caucasian,The Bostonians (BOOK II),457504
+19,Bret,Harte,449,w,M,1887,Caucasian,The crusade of the Excelsior,420083
+20,Bret,Harte,450,w,M,1887,Caucasian,Sally Dows,327911
+22,Bret,Harte,515,w,M,1888,Caucasian,The Argonauts of North Liberty,190089
+23,William Dean,Howells,521,w,M,1888,Caucasian,Annie Kilburn,440475
+24,Henry,James,524,w,M,1888,Caucasian,The Aspern papers,207895
+25,Bret,Harte,606,w,M,1889,Caucasian,Cressy,317586
+26,Kate,Chopin,671,w,F,1890,Caucasian,At fault,324798
+28,Bret,Harte,698,w,M,1890,Caucasian,A ward of the Golden Gate,273647
+29,Bret,Harte,699,w,M,1890,Caucasian,A waif of the plains,206481
+30,Henry,James,711,w,M,1890,Caucasian,The tragic muse,1150338
+31,Sarah Orne,Jewett,714,w,F,1890,Caucasian,Strangers and wayfarers,309920
+33,Bret,Harte,790,w,M,1891,Caucasian,A first family of Tasajara,330842
+34,William Dean,Howells,792,w,M,1891,Caucasian,The quality of mercy,636972
+35,Emma Dunham,Kelley,797,b,F,1891,Black,Megda,461895
+38,Hamlin,Garland,877,w,M,1892,Caucasian,A spoil of office,415305
+39,Hamlin,Garland,879,w,M,1892,Caucasian,A little Norsk: or: Ol' pap's Flaxen,140786
+40,Frances Ellen Watkins,Harper,894,b,F,1892,Black,Iola Leroy: or: Shadows uplifted,418459
+41,Henry,James,901,w,M,1892,Caucasian,Daisy Miller,122747
+42,Henry,James,902,w,M,1892,Caucasian,The lesson of the master,138378
+43,Mark,Twain,930,w,M,1892,Caucasian,The American claimant,358918
+44,Bret,Harte,980,w,M,1893,Caucasian,Susy: a story of the plains,288986
+45,William Dean,Howells,986,w,M,1893,Caucasian,The coast of Bohemia,382572
+46,Joel Chandler,Harris,1085,w,M,1894,Caucasian,Little Mr. Thimblefinger and his queer country,232522
+47,William Dean,Howells,1089,w,M,1894,Caucasian,A traveler from Altruria,357306
+49,Mark,Twain,1130,w,M,1894,Caucasian,Tom Sawyer abroad,173456
+50,Mark,Twain,1131,w,M,1894,Caucasian,The tragedy of Pudd'nhead Wilson,295947
+51,Stephen,Crane,1161,w,M,1895,Caucasian,The red badge of courage,260352
+52,Henry Blake,Fuller,1176,w,M,1895,Caucasian,With the procession,496786
+53,Hamlin,Garland,1177,w,M,1895,Caucasian,Rose of Dutcher's Coolly,477503
+54,Bret,Harte,1185,w,M,1895,Caucasian,In a hollow of the hills,222853
+55,Bret,Harte,1186,w,M,1895,Caucasian,Clarence,292785
+56,William Dean,Howells,1192,w,M,1895,Caucasian,Their wedding journey,416580
+57,Sarah Orne,Jewett,1196,w,F,1895,Caucasian,The life of Nancy,371300
+58,Stephen,Crane,1273,w,M,1896,Caucasian,The Little Regiment: and other episodes of the American Civil War,170826
+59,Mary Eleanor Wilkins,Freeman,1291,w,F,1896,Caucasian,Madelon,459187
+60,Henry,James,1312,w,M,1896,Caucasian,Embarrassments,335018
+61,Sarah Orne,Jewett,1315,w,F,1896,Caucasian,The country of the pointed firs,227496
+62,Mark,Twain,1362,w,M,1896,Caucasian,Personal recollections of Joan of Arc,427902
+63,Owen,Wister,1366,w,M,1896,Caucasian,Red men and white,446118
+65,Edward,Bellamy,1384,w,M,1897,Caucasian,Equality,894990
+66,Stephen,Crane,1415,w,M,1897,Caucasian,The third violet,178190
+67,Mary Eleanor Wilkins,Freeman,1437,w,F,1897,Caucasian,Jerome: a poor man,761451
+69,Henry,James,1457,w,M,1897,Caucasian,What Maisie knew,523272
+71,Paul Laurence,Dunbar,1563,b,M,1898,Black,Folks from Dixie,265962
+72,Paul Laurence,Dunbar,1564,b,M,1898,Black,The uncalled,288961
+73,Hamlin,Garland,1579,w,M,1898,Caucasian,The spirit of Sweetwater,81136
+74,Henry,James,1601,w,M,1898,Caucasian,In the cage,195446
+75,Frank,Norris,1629,w,M,1898,Caucasian,Moran of the Lady Letty,249804
+76,Owen,Wister,1666,w,M,1898,Caucasian,Lin McLean,398218
+77,Mary Eleanor Wilkins,Freeman,1725,w,F,1899,Caucasian,The Jamesons,156728
+78,Hamlin,Garland,1729,w,M,1899,Caucasian,The trail of the goldseekers,306812
+79,Sutton Elbert,Griggs,1734,b,M,1899,Black,Imperium in imperio,300759
+80,William Dean,Howells,1752,w,M,1899,Caucasian,Their silver wedding journey,832024
+81,Henry,James,1757,w,M,1899,Caucasian,The awkward age,765108
+82,Frank,Norris,1785,w,M,1899,Caucasian,McTeague,641931
+83,Frank,Norris,1786,w,M,1899,Caucasian,Blix,291338
+84,Edith,Wharton,1828,w,F,1899,Caucasian,The greater inclination,300141
+85,Edward,Bellamy,1850,w,M,1900,Caucasian,The duke of Stockbridge,589505
+86,Theodore,Dreiser,1884,w,M,1900,Caucasian,Sister Carrie,865647
+87,Paul Laurence,Dunbar,1886,b,M,1900,Black,The love of Landry,149721
+88,Booth,Tarkington,2010,w,M,1900,Caucasian,Monsieur Beaucaire,72472
+89,Charles W.,Chesnutt,2050,b,M,1901,Black,The marrow of tradition,501718
+90,Paul Laurence,Dunbar,2064,b,M,1901,Black,The fanatics,376686
+91,Mary Eleanor Wilkins,Freeman,2076,w,F,1901,Caucasian,The portion of labor,903211
+92,Henry Blake,Fuller,2080,w,M,1901,Caucasian,Under the skylights,416701
+93,Bret,Harte,2092,w,M,1901,Caucasian,Under the redwoods,364976
+94,Henry,James,2099,w,M,1901,Caucasian,The sacred fount,416492
+95,Upton,Sinclair,2152,w,M,1901,Caucasian,King Midas,551566
+96,Paul Laurence,Dunbar,2202,b,M,1902,Black,The sport of the gods,218735
+97,Hamlin,Garland,2217,w,M,1902,Caucasian,The captain of the Gray-horse troop,586235
+98,Sutton Elbert,Griggs,2219,b,M,1902,Black,Unfettered,343393
+99,Bret,Harte,2225,w,M,1902,Caucasian,Openings in the old trail,355833
+100,William Dean,Howells,2234,w,M,1902,Caucasian,The Kentons,423247
+101,Henry,James,2238,w,M,1902,Caucasian,The wings of the dove (BOOK 6 to End),580611
+102,Jack,London,2256,w,M,1902,Caucasian,Children of the frost,272740
+103,Booth,Tarkington,2294,w,M,1902,Caucasian,The two Vanrevels,349614
+104,Edith,Wharton,2304,w,F,1902,Caucasian,The valley of decision,880621
+105,Owen,Wister,2309,w,M,1902,Caucasian,The Virginian,711482
+106,Owen,Wister,2310,w,M,1902,Caucasian,The dragon of Wantley,170383
+107,Paul Laurence,Dunbar,2346,b,M,1903,Black,In old plantation days,332214
+108,Jack,London,2385,w,M,1903,Caucasian,The call of the wild,175350
+109,Upton,Sinclair,2419,w,M,1903,Caucasian,The journal of Arthur Stirling,396686
+110,Edith,Wharton,2437,w,F,1903,Caucasian,Sanctuary,151370
+111,Owen,Wister,2444,w,M,1903,Caucasian,Philosophy 4,65320
+112,Paul Laurence,Dunbar,2475,b,M,1904,Black,The heart of Happy Hollow,240485
+113,Hamlin,Garland,2482,w,M,1904,Caucasian,The light of the star,244266
+114,Henry,James,2499,w,M,1904,Caucasian,The golden bowl,1155816
+115,Edward A.,Johnson,2500,b,M,1904,Black,Light ahead for the Negro,167398
+116,Charles W.,Chesnutt,2593,b,M,1905,Black,The colonel's dream,488921
+117,Hamlin,Garland,2612,w,M,1905,Caucasian,The tyranny of the dark,587848
+120,Sutton E.,Griggs,2619,b,M,1905,Black,The hindered hand: or: The reign of the repressionist,419688
+121,Booth,Tarkington,2691,w,M,1905,Caucasian,The conquest of Canaan,464722
+122,Booth,Tarkington,2692,w,M,1905,Caucasian,The beautiful lady,89781
+123,Mary Eleanor Wilkins,Freeman,2753,w,F,1906,Caucasian,By the light of the soul,830898
+127,Bret,Harte,2767,w,M,1906,Caucasian,Drift from two shores,324889
+128,Jack,London,2786,w,M,1906,Caucasian,Before Adam,210469
+129,Owen,Wister,2837,w,M,1906,Caucasian,Lady Baltimore,527165
+130,Ambrose,Bierce,2846,w,M,1907,Caucasian,A son of the gods : and: A horseman in the sky,28767
+131,William Dean,Howells,2888,w,M,1907,Caucasian,Through the eye of the needle,369409
+132,William Dean,Howells,2889,w,M,1907,Caucasian,Between the dark and the daylight,276309
+133,William Dean,Howells,2890,w,M,1907,Caucasian,The lady of the Aroostook,417919
+134,Booth,Tarkington,2936,w,M,1907,Caucasian,His own people,93844
+136,Edith,Wharton,2948,w,F,1907,Caucasian,The fruit of the tree,815703
+137,Edith,Wharton,2949,w,F,1907,Caucasian,Madame de Treymes,108468
+138,Owen,Wister,2955,w,M,1907,Caucasian,How doth the simple spelling bee,58982
+139,Mary Eleanor Wilkins,Freeman,2988,w,F,1908,Caucasian,The shoulders of Atlas,423951
+140,Sutton Elbert,Griggs,2994,b,M,1908,Black,Pointing the way,292244
+141,William Dean,Howells,3006,w,M,1908,Caucasian,Christmas every day,99035
+142,Jack,London,3019,w,M,1908,Caucasian,Martin Eden,776367
+143,Booth,Tarkington,3054,w,M,1908,Caucasian,The guest of Quesnay,340908
+145,Hamlin,Garland,3106,w,M,1909,Caucasian,The Moccasin Ranch,98712
+146,Mark,Twain,3180,w,M,1909,Caucasian,Captain Stormfield's visit to heaven,80861
+147,Mary Eleanor Wilkins,Freeman,3230,w,F,1910,Caucasian,The green door,50939
+148,Henry,James,3255,w,M,1910,Caucasian,The finer grain,304235
+149,Jack,London,3269,w,M,1910,Caucasian,Burning Daylight,630341
+150,Jack,London,3270,w,M,1910,Caucasian,Lost Face,224036
+151,Upton,Sinclair,3305,w,M,1910,Caucasian,Samuel the seeker,345376
+152,Robert Lewis,Waring,3317,b,M,1910,Black,As we see it,398288
+153,Theodore,Dreiser,3352,w,M,1911,Caucasian,Jennie Gerhardt,721363
+154,Jack,London,3381,w,M,1911,Caucasian,Adventure,399741
+155,Jack,London,3382,w,M,1911,Caucasian,The strength of the strong,263715
+156,Edith,Wharton,3439,w,F,1911,Caucasian,Ethan Frome,188391
+157,Owen,Wister,3444,w,M,1911,Caucasian,Padre Ignacio: or: The song of temptation,53190
+159,Mary Eleanor Wilkins,Freeman,3486,w,F,1912,Caucasian,The Yates pride,40077
+160,Mary Eleanor Wilkins,Freeman,3487,w,F,1912,Caucasian,The butterfly house,301433
+161,James Weldon,Johnson,3504,b,M,1912,Black,The autobiography of an ex-colored man,278720
+162,Jack,London,3516,w,M,1912,Caucasian,Smoke Bellew,232080
+163,Jack,London,3517,w,M,1912,Caucasian,Son of the sun,320814
+166,Edith,Wharton,3681,w,F,1913,Caucasian,The custom of the country,787898
+170,Theodore,Dreiser,3713,w,M,1914,Caucasian,The Titan,1120396
+171,Sinclair,Lewis,3747,w,M,1914,Caucasian,Our Mr. Wrenn,436367
+172,Jack,London,3750,w,M,1914,Caucasian,The mutiny of the Elsinore,629348
+173,Frank,Norris,3765,w,M,1914,Caucasian,Vandover and the brute,556164
+174,Booth,Tarkington,3785,w,M,1914,Caucasian,Penrod,341562
+175,Willa,Cather,3814,w,F,1915,Caucasian,The song of the lark,858883
+176,Henry,James,3858,w,M,1915,Caucasian,The Coxon fund,126906
+177,Henry,James,3859,w,M,1915,Caucasian,The altar of the dead,80243
+178,Sinclair,Lewis,3863,w,M,1915,Caucasian,The trail of the hawk,704410
+179,Jack,London,3867,w,M,1915,Caucasian,The scarlet plague,112028
+180,Oscar,Micheaux,3878,b,M,1915,Black,The forged note,962726
+181,Hamlin,Garland,3950,w,M,1916,Caucasian,They of the high trails,561925
+182,William Dean,Howells,3963,w,M,1916,Caucasian,The daughter of the storage,355400
+183,William Dean,Howells,3964,w,M,1916,Caucasian,Buying a horse,37127
+184,Jack,London,3980,w,M,1916,Caucasian,The little lady of the big house,562467
+185,Jack,London,3981,w,M,1916,Caucasian,The turtles of Tasman,251846
+186,Booth,Tarkington,4019,w,M,1916,Caucasian,Penrod and Sam,381808
+187,Mark,Twain,4023,w,M,1916,Caucasian,The mysterious stranger,223677
+188,Abraham,Cahan,4054,w,M,1917,Caucasian,The rise of David Levinsky,933163
+190,Jack,London,4099,w,M,1917,Caucasian,Jerry of the islands,394450
+191,Jack,London,4100,w,M,1917,Caucasian,Michael: brother of Jerry,544458
+192,Upton,Sinclair,4138,w,M,1917,Caucasian,King Coal,670970
+193,Willa,Cather,4171,w,F,1918,Caucasian,My Antonia,443742
+194,Henry Blake,Fuller,4187,w,M,1918,Caucasian,On the stairs,262085
+195,Henry,James,4205,w,M,1918,Caucasian,The jolly corner,79720
+196,Booth,Tarkington,4249,w,M,1918,Caucasian,The magnificent Ambersons,568170
+199,Jack,London,4338,w,M,1919,Caucasian,On the Makaloa mat,306660
+200,Kelly,Miller,4350,b,M,1919,Black,Kelly Miller's history of the World War for human rights,1133479
+201,Upton,Sinclair,4372,w,M,1919,Caucasian,Jimmie Higgins,592955
+202,Booth,Tarkington,4381,w,M,1919,Caucasian,Ramsey Milholland,228523
+203,Mark,Twain,4385,w,M,1919,Caucasian,The curious Republic of Gondour: and other whimsical sketches,97241
+206,Willa,Cather,4415,w,F,1920,Caucasian,Youth and the bright Medusa,373562
+207,F. Scott,Fitzgerald,4431,w,M,1920,Caucasian,Flappers and philosophers,347301
+208,Sinclair,Lewis,4455,w,M,1920,Caucasian,Main Street,955256
+209,Edgar Lee,Masters,4464,w,M,1920,Caucasian,Mitch Miller,366930
+210,Robert Russa,Moton,4476,b,M,1920,Black,Finding a way out,349484
+211,Edith,Wharton,4506,w,F,1920,Caucasian,The age of innocence,580110
+213,Stephen,Crane,4538,w,M,1921,Caucasian,Men: women and boats,275997
+214,Hamlin,Garland,4559,w,M,1921,Caucasian,A daughter of the middle border,710149
+215,Booth,Tarkington,4620,w,M,1921,Caucasian,Alice Adams,473134
+216,Booth,Tarkington,4621,w,M,1921,Caucasian,Harlequin and Columbine,130132
+217,Willa,Cather,4657,w,F,1922,Caucasian,One of ours,691390
+218,F. Scott,Fitzgerald,4673,w,M,1922,Caucasian,The beautiful and damned,720279
+219,John P.,Marquand,4705,w,M,1922,Caucasian,The unspeakable gentleman,274424
+220,Edgar Lee,Masters,4708,w,M,1922,Caucasian,Children of the market place,640393
+221,Upton,Sinclair,4734,w,M,1922,Caucasian,They call me Carpenter,312634
+222,Booth,Tarkington,4743,w,M,1922,Caucasian,Gentle Julia,415943
+223,Booth,Tarkington,4744,w,M,1922,Caucasian,In the arena,259506
+224,Edith,Wharton,4756,w,F,1922,Caucasian,The glimpses of the moon,465417
+225,William Dean,Howells,4763,w,M,1885,Caucasian,Rise of Silas Lapham,693735
+226,William Dean,Howells,4764,w,M,1890,Caucasian,A Hazard of New Fortunes,902505
+227,D. H.,Lawrence,4849,w,M,1913,Caucasian,Sons and lovers,899528
+228,D. H.,Lawrence,4856,w,M,1915,Caucasian,The rainbow,1056170
+229,D. H.,Lawrence,4877,w,M,1922,Caucasian,Aaron's rod,626813
+230,Jessie Redmon,Fauset,10057,b,F,1928,Black,Plum bun,550790
+232,Claude,McKay,10075,b,M,1929,Black,Banjo,530324
+237,Juanita,Harrison,10126,b,F,1936,Black,My great: wide: beautiful world,463447
+240,Gertrude,Stein,10175,w,F,1945,Caucasian,Three lives : The good Anna: Melanctha: The gentle Lena,447496
+246,Edith,Wharton,10230,w,F,1924,Caucasian,Old New York,441339
+247,Sherwood,Anderson,10232,w,M,1925,Caucasian,Dark laughter,3235558
+248,Willa,Cather,10236,w,F,1925,Caucasian,The professor's house,333482
+249,John,Dos Passos,10238,w,M,1925,Caucasian,Manhattan transfer,704845
+250,Theodore,Dreiser,10239,w,M,1925,Caucasian,An American tragedy,1961451
+251,Theodore,Dreiser,10240,w,M,1925,Caucasian,The Genius,1683250
+252,F. Scott,Fitzgerald,10241,w,M,1925,Caucasian,The great Gatsby,267960
+255,Willa,Cather,10255,w,F,1926,Caucasian,My mortal enemy,95509
+256,William,Faulkner,10256,w,M,1926,Caucasian,Soldiers' pay,499902
+257,Ernest,Hemingway,10258,w,M,1926,Caucasian,The sun also rises,507646
+259,Willa,Cather,10267,w,F,1927,Caucasian,Death comes for the archbishop,388506
+260,William,Faulkner,10268,w,M,1927,Caucasian,Mosquitoes,571692
+262,Sinclair,Lewis,10273,w,M,1927,Caucasian,Elmer Gantry,876735
+263,Upton,Sinclair,10275,w,M,1927,Caucasian,Oil!,1198363
+264,Edith,Wharton,10279,w,F,1927,Caucasian,Twilight sleep,467154
+265,Thornton,Wilder,10280,w,M,1927,Caucasian,The bridge of San Luis Rey,178049
+266,Djuna,Barnes,10282,w,F,1928,Caucasian,Ladies almanack,90276
+268,Nella,Larsen,10293,b,F,1928,Black,Quicksand,268036
+269,Claude,McKay,10294,b,M,1928,Black,Home to Harlem,299643
+270,Edith,Wharton,10299,w,F,1928,Caucasian,The children,534377
+271,William,Faulkner,10303,w,M,1929,Caucasian,The sound and the fury,547472
+273,Sinclair,Lewis,10312,w,M,1929,Caucasian,Dodsworth,777204
+275,John,Steinbeck,10320,w,M,1929,Caucasian,Cup of Gold,371429
+276,Wallace,Thurman,10321,b,M,1929,Black,The blacker the berry,305943
+277,Edith,Wharton,10322,w,F,1929,Caucasian,Hudson river bracketed,934980
+278,Thomas,Wolfe,10323,w,M,1929,Caucasian,Look homeward: angel,1251540
+279,John,Dos Passos,10326,w,M,1930,Caucasian,The 42nd parallel,713922
+280,William,Faulkner,10328,w,M,1930,Caucasian,As I lay dying,291934
+282,Langston,Hughes,10333,b,M,1930,Black,Not without laughter,420956
+284,Thornton,Wilder,10341,w,M,1930,Caucasian,The woman of Andros,361010
+285,Willa,Cather,10344,w,F,1931,Caucasian,Shadows on the rock,373440
+287,William,Faulkner,10346,w,M,1931,Caucasian,Three famous short novels,570212
+288,Jessie Redmon,Fauset,10347,b,F,1931,Black,The chinaberry tree,501628
+291,George S.,Schuyler,10361,b,M,1931,Black,Black no more,310976
+292,Booth,Tarkington,10364,w,M,1931,Caucasian,The gentlemen from Indiana,566959
+295,Nathanael,West,10367,w,M,1931,Caucasian,The dream life of Balso Snell,98886
+296,Erskine,Caldwell,10374,w,M,1932,Caucasian,Tobacco road,307138
+297,Willa,Cather,10375,w,F,1932,Caucasian,Obscure destinies,220765
+298,John,Dos Passos,10377,w,M,1932,Caucasian,1919,834324
+299,James T.,Farrell,10378,w,M,1932,Caucasian,Studs Lonigan,1876424
+300,William,Faulkner,10380,w,M,1932,Caucasian,Light in August,808434
+301,Ernest,Hemingway,10382,w,M,1932,Caucasian,Men without women,219249
+304,John,Steinbeck,10392,w,M,1932,Caucasian,The Pastures of heaven,344521
+305,Wallace,Thurman,10393,b,M,1932,Black,Infants of the spring,296767
+307,Erskine,Caldwell,10402,w,M,1933,Caucasian,God's little acre,350909
+308,Jessie Redmon,Fauset,10404,b,F,1933,Black,Comedy: American style,510340
+309,F. Scott,Fitzgerald,10405,w,M,1933,Caucasian,Tender is the night,616007
+314,John,Steinbeck,10422,w,M,1933,Caucasian,To a god unknown,392059
+315,Nathanael,West,10425,w,M,1933,Caucasian,Miss Lonelyhearts,390595
+318,William,Faulkner,10437,w,M,1934,Caucasian,The Unvanquished,364701
+320,Zora Neale,Hurston,10443,b,F,1934,Black,Jonah's gourd vine,300839
+322,John,O'Hara,10448,w,M,1934,Caucasian,Appointment in Samarra,426442
+324,Henry,Roth,10455,w,M,1934,Caucasian,Call it sleep,831255
+325,Thornton,Wilder,10461,w,M,1934,Caucasian,Heaven's my destination,310086
+326,Thomas,Wolfe,10462,w,M,1934,Caucasian,You can't go home again,1435387
+327,Erskine,Caldwell,10465,w,M,1935,Caucasian,Journeyman,253449
+328,Willa,Cather,10467,w,F,1935,Caucasian,Lucy Gayheart,273579
+330,William,Faulkner,10471,w,M,1935,Caucasian,Pylon,464102
+331,Sinclair,Lewis,10476,w,M,1935,Caucasian,It can't happen here,730618
+333,John,O'Hara,10479,w,M,1935,Caucasian,Butterfield 8,469507
+334,John,Steinbeck,10480,w,M,1935,Caucasian,Tortilla flat,302842
+336,Thomas,Wolfe,10482,w,M,1935,Caucasian,Of time and the river,2202068
+337,Djuna,Barnes,10483,w,F,1936,Caucasian,Nightwood,267865
+338,Willa,Cather,10485,w,F,1936,Caucasian,Not under forty,143491
+340,John,Dos Passos,10487,w,M,1936,Caucasian,The big money,980316
+341,William,Faulkner,10488,w,M,1936,Caucasian,"Absalom, Absalom!",726588
+345,John,Steinbeck,10507,w,M,1936,Caucasian,In dubious battle,511257
+348,Edith,Wharton,10510,w,F,1936,Caucasian,The world over,332431
+349,Richard,Wright,10511,b,M,1936,Black,Uncle Tom's children,380426
+351,Ernest,Hemingway,10519,w,M,1937,Caucasian,To have and have not,290913
+352,Zora Neale,Hurston,10521,b,F,1937,Black,Their eyes were watching God,316067
+356,Upton,Sinclair,10530,w,M,1937,Caucasian,The flivver king,363728
+357,John,Steinbeck,10531,w,M,1937,Caucasian,Of mice and men,158022
+359,James,Agee,10537,w,M,1938,Caucasian,A death in the family,540588
+361,Vladimir Vladimirovich,Nabokov,10554,w,M,1938,Caucasian,Laughter in the dark,310233
+362,John,Steinbeck,10562,w,M,1938,Caucasian,The long valley,408482
+363,Edith,Wharton,10567,w,F,1938,Caucasian,The buccaneers,713394
+366,William,Faulkner,10579,w,M,1939,Caucasian,The wild palms,507533
+367,Zora Neale,Hurston,10582,b,F,1939,Black,Moses: man of the mountain,500222
+368,Henry,Miller,10583,w,M,1939,Caucasian,Tropic of Capricorn,705549
+369,John,Steinbeck,10586,w,M,1939,Caucasian,The grapes of wrath,965096
+373,Robert Penn,Warren,10592,w,M,1939,Caucasian,Night rider,850849
+374,Erskine,Caldwell,10597,w,M,1940,Caucasian,Trouble in July,260622
+376,Willa,Cather,10599,w,F,1940,Caucasian,Sapphira and the slave girl,309227
+378,William,Faulkner,10605,w,M,1940,Caucasian,The hamlet,765438
+379,Ernest,Hemingway,10609,w,M,1940,Caucasian,For whom the bell tolls,924390
+383,Carson,McCullers,10617,w,F,1940,Caucasian,The heart is a lonely hunter,644969
+388,Richard,Wright,10627,b,M,1940,Black,Native son,795196
+389,William,Attaway,10628,b,M,1941,Black,Blood on the forge,344678
+397,William (1897-1962).  Auteur,Faulkner,10662,w,M,1942,Caucasian,Go Down Moses,604069
+399,John P.,Marquand,10675,w,M,1942,Caucasian,Last laugh: Mr. Moto,307963
+403,John,Steinbeck,10691,w,M,1942,Caucasian,The moon is down,178281
+405,Eudora,Welty,10694,w,F,1942,Caucasian,The robber bridegroom,172733
+408,Erskine,Caldwell,10701,w,M,1943,Caucasian,Georgia boy,213492
+409,Raymond,Chandler,10702,w,M,1943,Caucasian,The lady in the lake,389403
+412,Sinclair,Lewis,10717,w,M,1943,Caucasian,Gideon Planish,618861
+413,Carson,McCullers,10722,w,F,1943,Caucasian,The ballad of the sad cafee,252941
+416,Wallace,Stegner,10728,w,M,1943,Caucasian,The Big Rock Candy mountain,1354167
+417,Saul,Bellow,10732,w,M,1944,Caucasian,Dangling man,280219
+426,Sinclair,Lewis,10781,w,M,1945,Caucasian,Cass Timberlane,748022
+427,Vladimir Vladimirovich,Nabokov,10787,w,M,1945,Caucasian,The real life of Sebastian Knight,324793
+430,Gertrude,Stein,10793,w,F,1945,Caucasian,Wars I have seen,560092
+431,John,Steinbeck,10794,w,M,1945,Caucasian,Cannery row,268790
+432,John,Steinbeck,10795,w,M,1945,Caucasian,The pearl,138330
+441,Carson,McCullers,10820,w,F,1946,Caucasian,The member of the wedding,308261
+443,Ann,Petry,10824,b,F,1946,Black,The street,648281
+449,Robert Penn,Warren,10833,w,M,1946,Caucasian,All the king's men,1138014
+451,Eudora,Welty,10835,w,F,1946,Caucasian,Delta wedding,510099
+455,Theodore,Dreiser,10847,w,M,1947,Caucasian,The stoic,714320
+458,Vladimir Vladimirovich,Nabokov,10863,w,M,1947,Caucasian,Bend sinister,383758
+462,John,Steinbeck,10872,w,M,1947,Caucasian,The wayward bus,460935
+465,Paul,Bowles,10882,w,M,1948,Caucasian,The sheltering sky,538622
+468,Truman,Capote,10888,w,M,1948,Caucasian,Other voices: other rooms,309502
+469,Raymond,Chandler,10889,w,M,1948,Caucasian,The big sleep,350654
+473,William,Faulkner,10894,w,M,1948,Caucasian,Intruder in the dust,410499
+475,Norman,Mailer,10905,w,M,1948,Caucasian,The naked and the dead,1479448
+478,Dorothy,West,10921,b,F,1948,Black,The living is easy,522462
+479,Thornton,Wilder,10922,w,M,1948,Caucasian,The ides of March,440125
+482,Erskine,Caldwell,10934,w,M,1949,Caucasian,Place called Estherville,348712
+486,Henry,Miller,10950,w,M,1949,Caucasian,Sexus,1067640
+489,Katherine Anne,Porter,10955,w,F,1949,Caucasian,Pale horse: pale rider: three short novels,333107
+492,Raymond,Chandler,10980,w,M,1950,Caucasian,The simple art of murder,657458
+493,Ernest,Hemingway,10992,w,M,1950,Caucasian,Across the river and into the trees,363807
+494,Henry,Miller,10998,w,M,1950,Caucasian,The colossus of Maroussi,436164
+495,D. H.,Lawrence,11026,w,M,1926,Caucasian,The plumed serpent,956186
+496,D. H.,Lawrence,11031,w,M,1928,Caucasian,Lady Chatterley's lover,641712
+498,Raymond,Chandler,11102,w,M,1942,Caucasian,The High Window,373727
+499,D. H.,Lawrence,11149,w,M,1925,Caucasian,St. Mawr,322235
+500,D. H.,Lawrence,11265,w,M,1929,Caucasian,The escaped cock,99234
+503,John,Hawkes,20014,w,M,1951,Caucasian,The beetle leg,247634
+506,James,Jones,20018,w,M,1951,Caucasian,From here to eternity,2060479
+507,Norman,Mailer,20023,w,M,1951,Caucasian,Barbary shore,523749
+511,Paul,Bowles,20047,w,M,1952,Caucasian,Let it come down,599483
+512,Truman,Capote,20051,w,M,1952,Caucasian,The grass harp,210114
+514,Ralph,Ellison,20055,b,M,1952,Black,Invisible Man,959852
+515,Ernest,Hemingway,20063,w,M,1952,Caucasian,The old man and the sea,133317
+518,Bernard,Malamud,20070,w,M,1952,Caucasian,The natural,389630
+519,Flannery,O'Connor,20073,w,F,1952,Caucasian,Wise blood,268747
+521,Kurt,Vonnegut,20079,w,M,1952,Caucasian,Player piano,574914
+523,James,Baldwin,20084,b,M,1953,Black,Go tell it on the mountain,433858
+524,Saul,Bellow,20085,w,M,1953,Caucasian,The adventures of Augie March,1337965
+525,Henry,Miller,20111,w,M,1953,Caucasian,Plexus,1202027
+529,John,Steinbeck,20168,w,M,1954,Caucasian,Sweet Thursday,381541
+530,Gore,Vidal,20169,w,M,1954,Caucasian,Messiah,466103
+531,Eudora,Welty,20170,w,F,1954,Caucasian,The Ponder heart,171225
+533,Paul,Bowles,20173,w,M,1955,Caucasian,The spider's house,809922
+534,William,Gaddis,20182,w,M,1955,Caucasian,The recognitions,2347285
+536,Joseph,Heller,20188,w,M,1955,Caucasian,Catch-22,1002690
+537,Norman,Mailer,20193,w,M,1955,Caucasian,The deer park,684379
+538,Vladimir Vladimirovich,Nabokov,20196,w,M,1955,Caucasian,Lolita,626638
+539,John,O'Hara,20199,w,M,1955,Caucasian,Ten North Frederick,935285
+540,James,Baldwin,20213,b,M,1956,Black,Giovanni's room,292361
+544,Henry,Miller,20247,w,M,1956,Caucasian,Quiet days in Clichy,156848
+546,William,Faulkner,20273,w,M,1957,Caucasian,The town,685750
+547,James,Jones,20282,w,M,1957,Caucasian,Some came running,2511450
+548,Jack,Kerouac,20283,w,M,1957,Caucasian,On the Road,616421
+550,Vladimir Vladimirovich,Nabokov,20294,w,M,1957,Caucasian,Pnin,291472
+551,Truman,Capote,20312,w,M,1958,Caucasian,Breakfast at Tiffany's,227033
+552,Raymond,Chandler,20313,w,M,1958,Caucasian,Playback,265069
+553,Langston,Hughes,20324,b,M,1958,Black,Tambourines to glory,182460
+554,Jack,Kerouac,20328,w,M,1958,Caucasian,The Dharma bums,400752
+555,Jack,Kerouac,20329,w,M,1958,Caucasian,The subterraneans,220808
+556,Henry,Miller,20340,w,M,1958,Caucasian,Big Sur and the oranges of Hieronymus Bosch,736607
+558,John,Updike,20352,w,M,1958,Caucasian,The poorhouse fair,280983
+559,Saul,Bellow,20358,w,M,1959,Caucasian,Henderson the rain king,673796
+561,Jack,Kerouac,20377,w,M,1959,Caucasian,Doctor Sax,352740
+562,Jack,Kerouac,20378,w,M,1959,Caucasian,Maggie Cassidy,303449
+563,Paule,Marshall,20384,b,F,1959,Black,Brown girl: brownstones,563473
+564,Henry,Miller,20388,w,M,1959,Caucasian,Nexus,680438
+565,Kurt,Vonnegut,20395,w,M,1959,Caucasian,The sirens of Titan,432997
+566,E. L.,Doctorow,20404,w,M,1960,Caucasian,Welcome to Hard Times,299677
+567,Jack,Kerouac,20409,w,M,1960,Caucasian,Tristessa,125160
+568,Flannery,O'Connor,20421,w,F,1960,Caucasian,The violent bear it away,313884
+569,William,Styron,20431,w,M,1960,Caucasian,Set this house on fire,1228163
+571,Bernard,Malamud,20462,w,M,1961,Caucasian,A new life,650527
+572,Walker,Percy,20469,w,M,1961,Caucasian,The moviegoer,367936
+573,Kurt,Vonnegut,20476,w,M,1961,Caucasian,Mother Night,259806
+577,William,Faulkner,20492,w,M,1962,Caucasian,The reivers,520122
+579,John,Hawkes,20497,w,M,1962,Caucasian,The cannibal,305486
+580,James,Jones,20500,w,M,1962,Caucasian,The thin red line,1100138
+581,Jack,Kerouac,20502,w,M,1962,Caucasian,Big Sur,318411
+582,Vladimir Vladimirovich,Nabokov,20514,w,M,1962,Caucasian,Pale fire,405667
+583,Philip,Roth,20520,w,M,1962,Caucasian,Letting go,1316196
+584,Wallace,Stegner,20524,w,M,1962,Caucasian,Wolf willow,653102
+585,John,Steinbeck,20525,w,M,1962,Caucasian,Travels with Charley,405181
+586,Saul,Bellow,20531,w,M,1963,Caucasian,Herzog,758222
+587,Samuel R,Delany,20538,b,M,1963,Black,Captives of the flame,266150
+588,Jack,Kerouac,20544,w,M,1963,Caucasian,Visions of Gerard,178719
+589,Kurt,Vonnegut,20563,w,M,1963,Caucasian,Cat's Cradle,295829
+594,Ernest J.,Gaines,20583,b,M,1964,Black,Catherine Carmier,312160
+597,John,Hawkes,20586,w,M,1964,Caucasian,Second skin,430008
+598,Vladimir Vladimirovich,Nabokov,20602,w,M,1964,Caucasian,The defense,401906
+599,E. R.  (Edward Ricardo),Braithwaite,20620,b,M,1965,Black,Choice of straws,387753
+600,Chester B.,Himes,20638,b,M,1965,Black,Cotton comes to Harlem,355633
+601,Norman,Mailer,20643,w,M,1965,Caucasian,An American Dream,484641
+602,Cormac,McCarthy,20645,w,M,1965,Caucasian,The orchard keeper,360606
+603,Vladimir Vladimirovich,Nabokov,20649,w,M,1965,Caucasian,The eye,120601
+606,John,Updike,20667,w,M,1965,Caucasian,Of the farm,227998
+607,Kurt,Vonnegut,20668,w,M,1965,Caucasian,God bless you: Mr. Rosewater,276268
+609,Samuel R,Delany,20683,b,M,1966,Black,Babel-17,340424
+610,Ronald L,Fair,20686,b,M,1966,Black,Hog butcher,296249
+611,Chester B.,Himes,20696,b,M,1966,Black,The heat's on,330599
+612,Cynthia,Ozick,20706,w,F,1966,Caucasian,Trust,1396642
+613,Ernest J.,Gaines,20738,b,M,1967,Black,Of love and dust,394894
+614,James,Jones,20740,w,M,1967,Caucasian,Go to the widow-maker,1554390
+615,Bernard,Malamud,20745,w,M,1967,Caucasian,The fixer,567255
+616,Joyce Carol,Oates,20753,w,F,1967,Caucasian,A garden of earthly delights,828061
+617,Ishmael,Reed,20755,b,M,1967,Black,The free-lance pallbearers,234749
+618,Philip,Roth,20756,w,M,1967,Caucasian,When she was good,568100
+619,James,Salter,20757,w,M,1967,Caucasian,A sport and a pastime,288921
+622,Wallace,Stegner,20764,w,M,1967,Caucasian,All the little live things,544248
+623,John,Barth,20770,w,M,1968,Caucasian,Lost in the Funhouse,382820
+624,Samuel R,Delany,20774,b,M,1968,Black,Nova,430627
+627,Jack,Kerouac,20779,w,M,1968,Caucasian,Vanity of Duluoz,458148
+629,Cormac,McCarthy,20787,w,M,1968,Caucasian,Outer dark,300745
+630,Joyce Carol,Oates,20791,w,F,1968,Caucasian,Expensive people,478656
+631,John,Updike,20804,w,M,1968,Caucasian,Couples,938662
+632,Gore,Vidal,20805,w,M,1968,Caucasian,Myra Breckinridge,337522
+633,Kurt,Vonnegut,20806,w,M,1968,Caucasian,Welcome to the monkey house,558420
+634,Barry,Beckham,20810,b,M,1969,Black,My main mother,362483
+635,John,Cheever,20815,w,M,1969,Caucasian,Bullet Park,340126
+636,Vladimir Vladimirovich,Nabokov,20837,w,M,1969,Caucasian,Ada,996589
+637,Philip,Roth,20848,w,M,1969,Caucasian,Portnoy's complaint,427494
+638,Kurt,Vonnegut,20858,w,M,1969,Caucasian,Slaughterhouse-five,277884
+639,Sarah E,Wright,20861,b,F,1969,Black,This child's gonna live,514122
+641,Ernest,Hemingway,20892,w,M,1970,Caucasian,Islands in the stream,766139
+642,Louise,Meriwether,20906,b,F,1970,Black,Daddy was a number runner,294957
+643,Toni,Morrison,20907,b,F,1970,Black,The bluest eye,286630
+645,Gil,Scott-Heron,20917,b,M,1970,Black,The vulture,375825
+646,Alice,Walker,20928,b,F,1970,Black,The third life of Grange Copeland,417589
+647,Eudora,Welty,20931,w,F,1970,Caucasian,Losing battles,903040
+648,Ed,Bullins,20938,b,M,1971,Black,The hungered one,210847
+649,Don,DeLillo,20947,w,M,1971,Caucasian,Americana,688086
+650,Ernest J.,Gaines,20952,b,M,1971,Black,The autobiography of Miss Jane Pittman,447493
+651,John,Hawkes,20959,w,M,1971,Caucasian,The blood oranges,427608
+652,James,Jones,20963,w,M,1971,Caucasian,The merry month of May,693254
+653,Ursula K.,Le Guin,20964,w,SCI,1971,Caucasian,The Lathe of Heaven,335254
+654,Joseph,McElroy,20972,w,M,1971,Caucasian,Ancient history,529671
+655,Joyce Carol,Oates,20978,w,F,1971,Caucasian,Wonderland,1076248
+656,Walker,Percy,20980,w,M,1971,Caucasian,Love in the ruins,647519
+657,Philip,Roth,20986,w,M,1971,Caucasian,Our Gang,263433
+658,John,Updike,20998,w,M,1971,Caucasian,Rabbit redux,726999
+659,Toni Cade,Bambara,21007,b,F,1972,Black,Gorilla: my love,247450
+660,Richard,Hall,21024,b,M,1972,Black,Long George Alley,341854
+661,Ursula K.,Le Guin,21034,w,SCI,1972,Caucasian,The word for world is forest,226082
+662,Vladimir Vladimirovich,Nabokov,21045,w,M,1972,Caucasian,Transparent things,159318
+663,Ishmael,Reed,21055,b,M,1972,Black,Mumbo jumbo,391478
+664,Philip,Roth,21060,w,M,1972,Caucasian,The breast,86317
+665,Gil,Scott-Heron,21061,b,M,1972,Black,The nigger factory,390345
+666,Eudora,Welty,21072,w,F,1972,Caucasian,The optimist's daughter,219088
+667,Don,DeLillo,21089,w,M,1973,Caucasian,Great Jones Street,365747
+668,Chester B.,Himes,21102,b,M,1973,Black,All shot up,298267
+669,Chester B.,Himes,21103,b,M,1973,Black,The big gold dream,308353
+670,Chester B.,Himes,21104,b,M,1973,Black,The crazy kill,283559
+671,Bernard,Malamud,21115,w,M,1973,Caucasian,Rembrandt's hat,256591
+672,Cormac,McCarthy,21118,w,M,1973,Caucasian,Child of God,188252
+673,Paul,Theroux,21145,w,M,1973,Caucasian,Saint Jack,403623
+674,Gore,Vidal,21146,w,M,1973,Caucasian,Burr,1005085
+675,Kurt,Vonnegut,21147,w,M,1973,Caucasian,Breakfast of Champions,326779
+676,Thornton,Wilder,21151,w,M,1973,Caucasian,Theophilus North,686369
+677,Virginia,Hamilton,21177,b,F,1974,Black,M.C. Higgins the Great,375324
+678,Joseph,Heller,21180,w,M,1974,Caucasian,Something happened,1015196
+679,Charles,Johnson,21184,b,M,1974,Black,Faith and the good thing,425921
+681,Vladimir Vladimirovich,Nabokov,21201,w,M,1974,Caucasian,Look at the harlequins!,388514
+682,Ishmael,Reed,21215,b,M,1974,Black,The last days of Louisiana Red,229192
+683,Vern E,Smith,21220,b,M,1974,Black,The Jones men,358483
+684,Robert,Stone,21222,w,M,1974,Caucasian,Dog soldiers,544236
+685,Donald,Barthelme,21236,w,M,1975,Caucasian,The dead father,227354
+686,Saul,Bellow,21237,w,M,1975,Caucasian,Humboldt's gift,1056468
+687,E. L.,Doctorow,21251,w,M,1975,Caucasian,Ragtime,453774
+688,William,Gaddis,21256,w,M,1975,Caucasian,J R,1906078
+689,Gayl,Jones,21267,b,F,1975,Black,Corregidora,271876
+690,James,Salter,21283,w,M,1975,Caucasian,Light years,498254
+691,Octavia E,Butler,21304,b,F,1976,Black,Patternmaster,288746
+693,Don,DeLillo,21311,w,M,1976,Caucasian,Ratner's star,865245
+695,Wallace,Stegner,21374,w,M,1976,Caucasian,The spectator bird,389808
+696,Kurt,Vonnegut,21379,w,M,1976,Caucasian,Slapstick,214249
+697,Octavia E,Butler,21401,b,F,1977,Black,Mind of my mind,386299
+698,John,Cheever,21407,w,M,1977,Caucasian,Falconer,320502
+699,Don,DeLillo,21411,w,M,1977,Caucasian,Players,300667
+702,Toni,Morrison,21455,b,F,1977,Black,Song of Solomon,624042
+703,Walker,Percy,21460,w,M,1977,Caucasian,Lancelot,386236
+704,Philip,Roth,21468,w,M,1977,Caucasian,The professor of desire,432362
+705,Wesley,Brown,21501,b,M,1978,Black,Tragic magic,237073
+706,Don,DeLillo,21514,w,M,1978,Caucasian,Running dog,383045
+709,Paul,Theroux,21580,w,M,1978,Caucasian,Picture palace,572636
+710,John,Updike,21583,w,M,1978,Caucasian,The coup,545550
+711,Octavia E,Butler,21605,b,F,1979,Black,Kindred,512066
+712,Barbara,Chase-Riboud,21606,b,F,1979,Black,Sally Hemings,705045
+714,Norman,Mailer,21642,w,M,1979,Caucasian,The executioner's song,1936066
+715,Cormac,McCarthy,21647,w,M,1979,Caucasian,Suttree,947887
+717,Philip,Roth,21668,w,M,1979,Caucasian,The ghost writer,246284
+718,James,Salter,21669,w,M,1979,Caucasian,Solo faces,278691
+719,Kurt,Vonnegut,21677,w,M,1979,Caucasian,Jailbird,357276
+720,Toni Cade,Bambara,21692,b,F,1980,Black,The salt eaters,524246
+723,Joyce Carol,Oates,21770,w,F,1980,Caucasian,Bellefleur,1457189
+724,Walker,Percy,21772,w,M,1980,Caucasian,The second coming,667877
+725,David,Bradley,21817,b,M,1981,Black,The Chaneysville incident,1015042
+728,Ursula K.,Le Guin,21856,w,SCI,1981,Caucasian,The beginning place,325538
+729,Toni,Morrison,21873,b,F,1981,Black,Tar baby,560709
+730,Philip,Roth,21886,w,M,1981,Caucasian,Zuckerman unbound,301106
+731,Robert,Stone,21897,w,M,1981,Caucasian,A flag for sunrise,906353
+732,Paul,Theroux,21901,w,M,1981,Caucasian,The Mosquito Coast,765067
+733,John,Updike,21903,w,M,1981,Caucasian,Rabbit is rich,929058
+735,John,Cheever,21937,w,M,1982,Caucasian,Oh: what a paradise it seems,154101
+736,Don,DeLillo,21946,w,M,1982,Caucasian,The names,632522
+737,Charles,Johnson,21969,b,M,1982,Black,Oxherding tale,364753
+738,Audre,Lorde,21980,b,F,1982,Black,Zami: a new spelling of my name,576356
+739,Bernard,Malamud,21986,w,M,1982,Caucasian,God's grace,299409
+740,Joyce Carol,Oates,22004,w,F,1982,Caucasian,A Bloodsmoor romance,1512045
+741,Marc,Olden,22005,b,M,1982,Black,Giri,597636
+742,Ntozake,Shange,22016,b,F,1982,Black,Sassafrass: Cypress & Indigo,343581
+743,Kurt,Vonnegut,22023,w,M,1982,Caucasian,Deadeye Dick,312854
+744,Alice,Walker,22026,b,F,1982,Black,The color purple,342054
+748,Ernest J.,Gaines,22075,b,M,1983,Black,A gathering of old men,338607
+749,Norman,Mailer,22099,w,M,1983,Caucasian,Ancient evenings,1585547
+752,Octavia E,Butler,22165,b,F,1984,Black,Clay's ark,336961
+753,J. California,Cooper,22174,b,F,1984,Black,A piece of mine,221574
+754,Samuel R,Delany,22178,b,M,1984,Black,Stars in my pocket like grains of sand,764743
+755,Andrea,Lee,22214,b,F,1984,Black,Sarah Phillips,254620
+757,Norman,Mailer,22222,w,M,1984,Caucasian,Tough guys don't dance,493425
+758,John,Updike,22278,w,M,1984,Caucasian,The witches of Eastwick,601344
+759,Gore,Vidal,22281,w,M,1984,Caucasian,Lincoln,1611555
+761,Don,DeLillo,22329,w,M,1985,Caucasian,White noise,575363
+762,E. L.,Doctorow,22335,w,M,1985,Caucasian,World's fair,537080
+764,Cormac,McCarthy,22382,w,M,1985,Caucasian,Blood meridian: or: The evening redness in the West,622972
+765,Mary,Monroe,22391,b,F,1985,Black,The upper room,469549
+766,Ntozake,Shange,22428,b,F,1985,Black,Betsey Brown,286793
+767,Kurt,Vonnegut,22437,w,M,1985,Caucasian,Galapagos,379924
+770,Clarence,Major,22538,b,M,1986,Black,My amputations,428325
+771,Robert,Stone,22586,w,M,1986,Caucasian,Children of light,464652
+772,John,Updike,22593,w,M,1986,Caucasian,Roger's version,618145
+773,Sherley Anne,Williams,22601,b,F,1986,Black,Dessa Rose,443238
+774,Octavia E,Butler,22636,b,F,1987,Black,Dawn,424214
+775,Truman,Capote,22639,w,M,1987,Caucasian,Answered prayers,260648
+777,Terry,McMillan,22737,b,F,1987,Black,Mama,493285
+778,Toni,Morrison,22741,b,F,1987,Black,Beloved,522666
+779,Walker,Percy,22751,w,M,1987,Caucasian,The thanatos syndrome,692371
+780,Wallace,Stegner,22786,w,M,1987,Caucasian,Crossing to safety,617082
+781,Kurt,Vonnegut,22793,w,M,1987,Caucasian,Bluebeard,376053
+782,Octavia E,Butler,22846,b,F,1988,Black,Adulthood rites,455296
+784,C. Eric 1924-2000.  (Charles Eric),Lincoln,22922,b,M,1988,Black,The Avenue: Clayton City,559321
+785,John,Updike,22994,w,M,1988,Caucasian,S.,429711
+786,Octavia E,Butler,23050,b,F,1989,Black,Imago,399417
+787,E. L.,Doctorow,23073,w,M,1989,Caucasian,Billy Bathgate,639919
+788,Joyce Carol,Oates,23155,w,F,1989,Caucasian,American appetites,703548
+790,Ishmael,Reed,23172,b,M,1989,Black,The terrible threes,251142
+791,Paul,Theroux,23215,w,M,1989,Caucasian,My secret history,956384
+794,Peter,Matthiessen,23373,w,M,1990,Caucasian,Killing Mister Watson,786217
+795,Walter,Mosley,23387,b,M,1990,Black,Devil in a blue dress,290493
+796,Philip,Roth,23420,w,M,1990,Caucasian,Deception,204297
+797,John,Updike,23448,w,M,1990,Caucasian,Rabbit at rest,1045628
+798,Kurt,Vonnegut,23450,w,M,1990,Caucasian,Hocus pocus,448576
+800,William,Golding,23476,w,M,1954,Caucasian,Lord of the flies,335513
+801,William,Golding,23483,w,M,1956,Caucasian,Pincher Martin,291296
+803,Buchi,Emecheta,23570,w,F,1979,Black,The joys of motherhood,473611
+805,Robert,Coover,23638,w,M,1991,Caucasian,Pinocchio in Venice,676286
+807,Ron,Hansen,23668,w,M,1991,Caucasian,Mariette in ecstasy,274526
+809,Albert,Murray,23703,b,M,1991,Black,The spyglass tree,356864
+810,Connie Rose,Porter,23716,b,F,1991,Black,All-Bright Court,338550
+811,Anita,Shreve,23728,w,F,1991,Caucasian,Strange fits of passion,465650
+815,Annie,Dillard,23787,w,F,1992,Caucasian,The living,917950
+816,Marita,Golden,23791,b,F,1992,Black,And do remember me,311092
+817,Darryl,Pinckney,23845,b,M,1992,Black,High cotton,546266
+818,Annie,Proulx,23847,w,F,1992,Caucasian,Postcards,588394
+819,Tina McElroy,Ansa,23881,b,F,1993,Black,Ugly ways,428449
+821,Jeffrey,Eugenides,23913,w,M,1993,Caucasian,The virgin suicides,372864
+822,Lynn,Freed,23916,w,F,1993,Caucasian,The bungalow,429371
+823,David,Haynes,23926,b,M,1993,Black,Right by my side,339865
+824,Alan P.,Lightman,23936,w,M,1993,Caucasian,Einstein's dreams,125160
+826,Annie,Proulx,23963,w,F,1993,Caucasian,The shipping news,601886
+827,Jewell Parker,Rhodes,23964,b,F,1993,Black,Voodoo dreams,796072
+829,Charlotte Watson,Sherman,23974,b,F,1993,Black,One dark body,241974
+831,Edwidge,Danticat,24027,b,F,1994,Black,Breath: eyes: memory,282151
+834,Julius,Lester,24070,b,M,1994,Black,And all our wounds forgiven,353265
+835,Jonathan,Lethem,24071,w,M,1994,Caucasian,Gun: with occasional music,399101
+836,Alan P.,Lightman,24072,w,M,1994,Caucasian,Good Benito,249973
+837,April,Sinclair,24110,b,F,1994,Black,Coffee will make you black,429518
+839,Tananarive,Due,24174,b,F,1995,Black,The between,462041
+841,Jonathan,Lethem,24209,w,M,1995,Caucasian,Amnesia moon,351066
+842,Bradford,Morrow,24226,w,M,1995,Caucasian,Trinity fields,764307
+843,Albert,Murray,24228,b,M,1995,Black,The seven league boots,759186
+845,Richard,Powers,24239,w,M,1995,Caucasian,Galatea 2.2,654193
+846,A. J.,Verdelle,24258,b,F,1995,Black,The good Negress,473994
+849,Gary,Hardwick,24332,b,M,1996,Black,Cold medina,538415
+850,Dale,Peck,24389,w,M,1996,Caucasian,The law of enclosures,585318
+852,Annie,Proulx,24398,w,F,1996,Caucasian,Accordion crimes,892432
+853,Joanna,Scott,24412,w,F,1996,Caucasian,The manikin,593221
+854,April,Sinclair,24416,b,F,1996,Black,Ain't gonna be the same fool twice,449657
+857,Gary,Hardwick,24499,b,M,1997,Black,Double dead,632588
+858,David,Mamet,24531,w,M,1997,Caucasian,The old religion,194779
+861,Anita,Shreve,24579,w,F,1997,Caucasian,The weight of water,423038
+862,Jonathan,Ames,24607,w,M,1998,Caucasian,The extra man,673509
+863,John,Casey,24634,w,M,1998,Caucasian,The half-life of happiness,1210575
+864,Edwidge,Danticat,24651,b,F,1998,Black,The farming of bones,431237
+866,Hugh,Holton,24689,b,M,1998,Black,Red lightning,492639
+867,Nalo,Hopkinson,24690,b,F,1998,Black,Brown girl in the ring,353802
+868,Jonathan,Lethem,24709,w,M,1998,Caucasian,Girl in landscape,337545
+870,Rosalyn,McMillan,24725,b,F,1998,Black,Blue collar blues,596793
+871,Richard,Powers,24745,w,M,1998,Caucasian,Gain,863760
+873,Anita,Shreve,24764,w,F,1998,Caucasian,The pilot's wife,426802
+875,Michael,Cunningham,24848,w,M,1999,Caucasian,The hours,307320
+876,Eric Jerome,Dickey,24857,b,M,1999,Black,Cheaters,757763
+878,Walter,Kirn,24917,w,M,1999,Caucasian,Thumbsucker,360630
+879,Jonathan,Lethem,24927,w,M,1999,Caucasian,Motherless Brooklyn,543104
+881,David,Plante,24964,w,M,1999,Caucasian,The age of terror,319468
+882,Anita,Shreve,24977,w,F,1999,Caucasian,Fortune's rocks,794361
+883,Paula L,Woods,25000,b,F,1999,Black,Inner city blues,566523
+884,Emily,Barton,25014,w,F,2000,Caucasian,The testament of Yves Gundron,597035
+886,Tony,Earley,25056,w,M,2000,Caucasian,Jim the boy,265134
+887,Sharon Ewell,Foster,25070,b,F,2000,Black,Passing by Samaria,541118
+888,Ardella,Garland,25073,b,F,2000,Black,Details at ten,296473
+889,Zo,Heller,25095,w,F,2000,Caucasian,Everything you know,326980
+890,Hugh,Holton,25100,b,M,2000,Black,Time of the assassins,628620
+891,Nalo,Hopkinson,25103,b,F,2000,Black,Midnight robber,586013
+893,Alan P.,Lightman,25124,w,M,2000,Caucasian,The diagnosis,593585
+894,Bernice L,McFadden,25136,b,F,2000,Black,Sugar,416834
+895,Alison,McGhee,25138,w,F,2000,Caucasian,Shadow baby,339468
+897,Richard,Powers,25169,w,M,2000,Caucasian,Plowing the dark,857737
+898,,,99999,BIBLE,,,,BIBLE,4332562

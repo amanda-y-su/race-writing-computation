@@ -1,0 +1,360 @@
+title,author_first,author_last,genre,gender,sample_group,score,labeled_points,highlight
+The living,Annie,Dillard,white,female,KJV_align,-0.886827959,,no
+Not without laughter,Langston,Hughes,black,male,KJV_align,-0.628989858,,no
+Megda,Emma Dunham,Kelley,black,female,KJV_align,-0.583941883,Megda,yes
+Bellefleur,Joyce Carol,Oates,white,female,KJV_align,-0.50327439,,no
+The rainbow,D. H.,Lawrence,white,male,KJV_align,-0.492127174,,no
+The stoic,Theodore,Dreiser,white,male,KJV_align,-0.436892102,,no
+Finding a way out,Robert Russa,Moton,black,male,KJV_align,-0.385261793,,no
+Giovanni's room,James,Baldwin,black,male,KJV_align,-0.385261793,,no
+The recognitions,William,Gaddis,white,male,KJV_align,-0.342756243,,no
+Kelly Miller's history of the World War for human rights,Kelly,Miller,black,male,random,-0.330450968,,no
+The vulture,Gil,Scott-Heron,black,male,random,-0.330450968,,no
+Of love and dust,Ernest J.,Gaines,black,male,random,-0.330450968,,no
+Red lightning,Hugh,Holton,black,male,random,-0.330450968,,no
+The executioner's song,Norman,Mailer,white,male,KJV_align,-0.297304948,,no
+Gain,Richard,Powers,white,male,KJV_align,-0.297304948,,no
+Three lives : The good Anna: Melanctha: The gentle Lena,Gertrude,Stein,white,female,random,-0.295221915,,no
+Travels with Charley,John,Steinbeck,white,male,KJV_align,-0.281479601,,no
+The orchard keeper,Cormac,McCarthy,white,male,KJV_align,-0.281479601,,no
+The rise of David Levinsky,Abraham,Cahan,white,male,KJV_align,-0.239035938,,no
+Herzog,Saul,Bellow,white,male,KJV_align,-0.239035938,Herzog,yes
+The portion of labor,Mary Eleanor Wilkins,Freeman,white,female,KJV_align,-0.233451434,,no
+A Bloodsmoor romance,Joyce Carol,Oates,white,female,KJV_align,-0.233451434,,no
+My great: wide: beautiful world,Juanita,Harrison,black,female,random,-0.225866093,,no
+Adulthood rites,Octavia E,Butler,black,female,random,-0.225866093,,no
+Dessa Rose,Sherley Anne,Williams,black,female,random,-0.225866093,,no
+The between,Tananarive,Due,black,female,random,-0.225866093,,no
+Galapagos,Kurt,Vonnegut,white,male,KJV_align,-0.219479773,,no
+Falconer,John,Cheever,white,male,random,-0.196995427,,no
+Pale fire,Vladimir Vladimirovich,Nabokov,white,male,random,-0.196995427,,no
+Sally Dows,Bret,Harte,white,male,random,-0.196995427,,no
+The mysterious stranger,Mark,Twain,white,male,random,-0.196995427,,no
+In old plantation days,Paul Laurence,Dunbar,black,male,KJV_align,-0.19479034,,no
+Black no more,George S.,Schuyler,black,male,KJV_align,-0.19479034,,no
+Equality,Edward,Bellamy,white,male,KJV_align,-0.158221104,,no
+The sun also rises,Ernest,Hemingway,white,male,KJV_align,-0.131060496,,no
+Time of the assassins,Hugh,Holton,black,male,random,-0.130011779,,no
+The Jones men,Vern E,Smith,black,male,random,-0.130011779,,no
+Light ahead for the Negro,Edward A.,Johnson,black,male,random,-0.130011779,,no
+The seven league boots,Albert,Murray,black,male,random,-0.130011779,,no
+It can't happen here,Sinclair,Lewis,white,male,KJV_align,-0.066638801,,no
+For whom the bell tolls,Ernest,Hemingway,white,male,KJV_align,-0.066638801,,no
+Jonah's gourd vine,Zora Neale,Hurston,black,female,KJV_align,-0.031914948,,no
+Lady Baltimore,Owen,Wister,white,male,KJV_align,-0.028446048,,no
+Jennie Gerhardt,Theodore,Dreiser,white,male,KJV_align,-0.028446048,,no
+Rise of Silas Lapham,William Dean,Howells,white,male,KJV_align,-0.028446048,,no
+All the king's men,Robert Penn,Warren,white,male,KJV_align,-0.028446048,,no
+Visions of Gerard,Jack,Kerouac,white,male,KJV_align,-0.028446048,,no
+The good Negress,A. J.,Verdelle,black,female,KJV_align,-0.003206025,,no
+Unfettered,Sutton Elbert,Griggs,black,male,KJV_align,0.027245721,,no
+The violent bear it away,Flannery,O'Connor,white,female,random,0.034190716,,no
+The Jamesons,Mary Eleanor Wilkins,Freeman,white,female,random,0.034190716,,no
+Everything you know,Zo,Heller,white,female,random,0.034190716,,no
+My mortal enemy,Willa,Cather,white,female,random,0.034190716,,no
+Look homeward: angel,Thomas,Wolfe,white,male,KJV_align,0.039145425,,no
+The old man and the sea,Ernest,Hemingway,white,male,KJV_align,0.039145425,,no
+Nexus,Henry,Miller,white,male,KJV_align,0.039145425,,no
+Killing Mister Watson,Peter,Matthiessen,white,male,KJV_align,0.039145425,,no
+Sally Hemings,Barbara,Chase-Riboud,black,female,random,0.076488412,,no
+The salt eaters,Toni Cade,Bambara,black,female,random,0.076488412,,no
+Patternmaster,Octavia E,Butler,black,female,random,0.076488412,,no
+Corregidora,Gayl,Jones,black,female,random,0.076488412,,no
+All-Bright Court,Connie Rose,Porter,black,female,random,0.076488412,,no
+Accordion crimes,Annie,Proulx,white,female,KJV_align,0.090391184,,no
+The hours,Michael,Cunningham,white,male,random,0.094264924,,no
+Sister Carrie,Theodore,Dreiser,white,male,random,0.094264924,,no
+Welcome to Hard Times,E. L.,Doctorow,white,male,random,0.094264924,,no
+Children of the market place,Edgar Lee,Masters,white,male,random,0.094264924,,no
+In the arena,Booth,Tarkington,white,male,random,0.094264924,,no
+Three famous short novels,William,Faulkner,white,male,random,0.094264924,,no
+Across the river and into the trees,Ernest,Hemingway,white,male,random,0.094264924,,no
+Look at the harlequins!,Vladimir Vladimirovich,Nabokov,white,male,random,0.094264924,,no
+The spirit of Sweetwater,Hamlin,Garland,white,male,random,0.094264924,,no
+The witches of Eastwick,John,Updike,white,male,random,0.094264924,,no
+Padre Ignacio: or: The song of temptation,Owen,Wister,white,male,random,0.094264924,,no
+The eye,Vladimir Vladimirovich,Nabokov,white,male,random,0.094264924,,no
+Smoke Bellew,Jack,London,white,male,random,0.094264924,,no
+Jimmie Higgins,Upton,Sinclair,white,male,random,0.094264924,,no
+The strength of the strong,Jack,London,white,male,random,0.094264924,,no
+The beetle leg,John,Hawkes,white,male,random,0.094264924,,no
+Deception,Philip,Roth,white,male,random,0.094264924,,no
+The Titan,Theodore,Dreiser,white,male,random,0.094264924,,no
+Under the redwoods,Bret,Harte,white,male,random,0.094264924,,no
+The big sleep,Raymond,Chandler,white,male,random,0.094264924,,no
+The beautiful lady,Booth,Tarkington,white,male,random,0.094264924,,no
+Doctor Sax,Jack,Kerouac,white,male,random,0.094264924,,no
+The Kentons,William Dean,Howells,white,male,random,0.094264924,,no
+The trail of the goldseekers,Hamlin,Garland,white,male,random,0.094264924,,no
+Last laugh: Mr. Moto,John P.,Marquand,white,male,random,0.094264924,,no
+The Virginian,Owen,Wister,white,male,random,0.094264924,,no
+The coast of Bohemia,William Dean,Howells,white,male,random,0.094264924,,no
+Captain Stormfield's visit to heaven,Mark,Twain,white,male,random,0.094264924,,no
+Bluebeard,Kurt,Vonnegut,white,male,random,0.094264924,,no
+Rabbit is rich,John,Updike,white,male,random,0.094264924,,no
+The curious Republic of Gondour: and other whimsical sketches,Mark,Twain,white,male,random,0.094264924,,no
+The daughter of the storage,William Dean,Howells,white,male,random,0.094264924,,no
+The law of enclosures,Dale,Peck,white,male,random,0.094264924,,no
+The tragic muse,Henry,James,white,male,random,0.094264924,,no
+The conquest of Canaan,Booth,Tarkington,white,male,random,0.094264924,,no
+The lesson of the master,Henry,James,white,male,random,0.094264924,,no
+The subterraneans,Jack,Kerouac,white,male,random,0.094264924,,no
+White noise,Don,DeLillo,white,male,random,0.094264924,,no
+Mama,Terry,McMillan,black,female,random,0.11632885,,no
+A piece of mine,J. California,Cooper,black,female,random,0.11632885,,no
+The Chaneysville incident,David,Bradley,black,male,KJV_align,0.123299965,,no
+Native son,Richard,Wright,black,male,KJV_align,0.13079766,,no
+Babel-17,Samuel R,Delany,black,male,random,0.135791278,,no
+Stars in my pocket like grains of sand,Samuel R,Delany,black,male,random,0.135791278,,no
+The nigger factory,Gil,Scott-Heron,black,male,random,0.135791278,,no
+Imperium in imperio,Sutton Elbert,Griggs,black,male,random,0.135791278,,no
+Mumbo jumbo,Ishmael,Reed,black,male,random,0.135791278,,no
+The blacker the berry,Wallace,Thurman,black,male,random,0.135791278,,no
+Infants of the spring,Wallace,Thurman,black,male,random,0.135791278,,no
+The last days of Louisiana Red,Ishmael,Reed,black,male,random,0.135791278,,no
+The hungered one,Ed,Bullins,black,male,random,0.135791278,,no
+Oxherding tale,Charles,Johnson,black,male,random,0.135791278,,no
+The heart is a lonely hunter,Carson,McCullers,white,female,KJV_align,0.138144812,,no
+The Genius,Theodore,Dreiser,white,male,KJV_align,0.149121778,,no
+Lincoln,Gore,Vidal,white,male,KJV_align,0.154219164,,no
+King Midas,Upton,Sinclair,white,male,KJV_align,0.164542511,,no
+1919,John,Dos Passos,white,male,KJV_align,0.164542511,,no
+Tropic of Capricorn,Henry,Miller,white,male,KJV_align,0.164542511,,no
+Bullet Park,John,Cheever,white,male,KJV_align,0.164542511,,no
+The dead father,Donald,Barthelme,white,male,KJV_align,0.164542511,,no
+The crazy kill,Chester B.,Himes,black,male,KJV_align,0.188242451,,no
+Red men and white,Owen,Wister,white,male,KJV_align,0.204433574,,no
+Our Gang,Philip,Roth,white,male,KJV_align,0.204433574,,no
+Go tell it on the mountain,James,Baldwin,black,male,KJV_align,0.204588537,Go Tell it to the Mountain,yes
+Inner city blues,Paula L,Woods,black,female,KJV_align,0.223648254,,no
+The free-lance pallbearers,Ishmael,Reed,black,male,random,0.245997639,,no
+Banjo,Claude,McKay,black,male,random,0.245997639,,no
+Of time and the river,Thomas,Wolfe,white,male,KJV_align,0.250482151,,no
+The song of the lark,Willa,Cather,white,female,KJV_align,0.273194648,,no
+My Antonia,Willa,Cather,white,female,KJV_align,0.273194648,,no
+The optimist's daughter,Eudora,Welty,white,female,KJV_align,0.273194648,,no
+Iola Leroy: or: Shadows uplifted,Frances Ellen Watkins,Harper,black,female,KJV_align,0.274103424,,no
+The bluest eye,Toni,Morrison,black,female,KJV_align,0.274103424,,no
+An American tragedy,Theodore,Dreiser,white,male,KJV_align,0.308653745,An American Tragedy,yes
+Lin McLean,Owen,Wister,white,male,KJV_align,0.318819645,,no
+Openings in the old trail,Bret,Harte,white,male,KJV_align,0.318819645,,no
+On the Makaloa mat,Jack,London,white,male,KJV_align,0.318819645,,no
+Main Street,Sinclair,Lewis,white,male,KJV_align,0.318819645,,no
+The unspeakable gentleman,John P.,Marquand,white,male,KJV_align,0.318819645,,no
+Sons and lovers,D. H.,Lawrence,white,male,KJV_align,0.318819645,,no
+Dodsworth,Sinclair,Lewis,white,male,KJV_align,0.318819645,,no
+Cup of Gold,John,Steinbeck,white,male,KJV_align,0.318819645,,no
+The 42nd parallel,John,Dos Passos,white,male,KJV_align,0.318819645,,no
+The gentlemen from Indiana,Booth,Tarkington,white,male,KJV_align,0.318819645,,no
+Dangling man,Saul,Bellow,white,male,KJV_align,0.318819645,,no
+Nightmare alley,William Lindsay,Gresham,white,male,KJV_align,0.318819645,,no
+The poorhouse fair,John,Updike,white,male,KJV_align,0.318819645,,no
+Cat's Cradle,Kurt,Vonnegut,white,male,KJV_align,0.318819645,,no
+Mind over murder,William X,Kienzle,white,male,KJV_align,0.318819645,,no
+Tough guys don't dance,Norman,Mailer,white,male,KJV_align,0.318819645,,no
+Hocus pocus,Kurt,Vonnegut,white,male,KJV_align,0.318819645,,no
+They call me Carpenter,Upton,Sinclair,white,male,KJV_align,0.333620687,,no
+One of ours,Willa,Cather,white,female,random,0.353035304,,no
+Oil!,Upton,Sinclair,white,male,KJV_align,0.357392731,,no
+Brown girl: brownstones,Paule,Marshall,black,female,KJV_align,0.358162955,,no
+Their eyes were watching God,Zora Neale,Hurston,black,female,KJV_align,0.358162955,,no
+Song of Solomon,Toni,Morrison,black,female,KJV_align,0.358162955,,no
+The second coming,Walker,Percy,white,male,KJV_align,0.361758071,,no
+The uncalled,Paul Laurence,Dunbar,black,male,KJV_align,0.390524646,,no
+High cotton,Darryl,Pinckney,black,male,KJV_align,0.390524646,,no
+You can't go home again,Thomas,Wolfe,white,male,KJV_align,0.401995242,,no
+Of the farm,John,Updike,white,male,KJV_align,0.401995242,,no
+One dark body,Charlotte Watson,Sherman,black,female,random,0.423095331,,no
+M.C. Higgins the Great,Virginia,Hamilton,black,female,random,0.423095331,,no
+Midnight robber,Nalo,Hopkinson,black,female,random,0.423095331,,no
+Details at ten,Ardella,Garland,black,female,random,0.423095331,,no
+Daddy was a number runner,Louise,Meriwether,black,female,random,0.423095331,,no
+Clay's ark,Octavia E,Butler,black,female,random,0.423095331,,no
+Studs Lonigan,James T.,Farrell,white,male,KJV_align,0.438653194,,no
+Playback,Raymond,Chandler,white,male,random,0.452951508,,no
+Plowing the dark,Richard,Powers,white,male,random,0.452951508,,no
+In a hollow of the hills,Bret,Harte,white,male,random,0.452951508,,no
+The virgin suicides,Jeffrey,Eugenides,white,male,random,0.452951508,,no
+The extra man,Jonathan,Ames,white,male,random,0.452951508,,no
+Lancelot,Walker,Percy,white,male,random,0.452951508,,no
+Go Down Moses,William (1897-1962).  Auteur,Faulkner,white,male,random,0.452951508,,no
+Faith and the good thing,Charles,Johnson,black,male,KJV_align,0.457447893,,no
+Giri,Marc,Olden,black,male,KJV_align,0.457447893,,no
+The sport of the gods,Paul Laurence,Dunbar,black,male,random,0.523881872,,no
+The heat's on,Chester B.,Himes,black,male,random,0.523881872,,no
+Cheaters,Eric Jerome,Dickey,black,male,random,0.523881872,,no
+Choice of straws,E. R.  (Edward Ricardo),Braithwaite,black,male,random,0.523881872,,no
+Henderson the rain king,Saul,Bellow,white,male,KJV_align,0.5290743,,no
+Old New York,Edith,Wharton,white,female,KJV_align,0.563107315,,no
+Wonderland,Joyce Carol,Oates,white,female,KJV_align,0.563107315,,no
+Dark laughter,Sherwood,Anderson,white,male,KJV_align,0.595386596,,no
+The colonel's dream,Charles W.,Chesnutt,black,male,KJV_align,0.612227729,,no
+Mariette in ecstasy,Ron,Hansen,white,male,KJV_align,0.636863475,,no
+A Hazard of New Fortunes,William Dean,Howells,white,male,KJV_align,0.656316668,,no
+Theophilus North,Thornton,Wilder,white,male,KJV_align,0.656316668,,no
+The journal of Arthur Stirling,Upton,Sinclair,white,male,KJV_align,0.656316668,,no
+Samuel the seeker,Upton,Sinclair,white,male,KJV_align,0.656316668,,no
+Portnoy's complaint,Philip,Roth,white,male,KJV_align,0.656316668,,no
+Slaughterhouse-five,Kurt,Vonnegut,white,male,KJV_align,0.656316668,,no
+Rabbit redux,John,Updike,white,male,KJV_align,0.656316668,,no
+The hindered hand: or: The reign of the repressionist,Sutton E.,Griggs,black,male,KJV_align,0.656913275,,no
+A death in the family,James,Agee,white,male,KJV_align,0.668963371,,no
+Mind of my mind,Octavia E,Butler,black,female,random,0.676079547,,no
+Plum bun,Jessie Redmon,Fauset,black,female,random,0.676079547,,no
+The heart of Happy Hollow,Paul Laurence,Dunbar,black,male,KJV_align,0.692309952,,no
+The autobiography of an ex-colored man,James Weldon,Johnson,black,male,KJV_align,0.692309952,,no
+Tragic magic,Wesley,Brown,black,male,KJV_align,0.692309952,,no
+The Dharma bums,Jack,Kerouac,white,male,random,0.713801622,,no
+As we see it,Robert Lewis,Waring,black,male,KJV_align,0.748676564,,no
+My amputations,Clarence,Major,black,male,KJV_align,0.748676564,,no
+By the light of the soul,Mary Eleanor Wilkins,Freeman,white,female,KJV_align,0.776695792,,no
+Quicksand,Nella,Larsen,black,female,KJV_align,0.781305839,,no
+Moses: man of the mountain,Zora Neale,Hurston,black,female,KJV_align,0.781305839,,no
+The fixer,Bernard,Malamud,white,male,KJV_align,0.791748087,,no
+Pointing the way,Sutton Elbert,Griggs,black,male,random,0.803973035,,no
+Right by my side,David,Haynes,black,male,random,0.803973035,,no
+Catherine Carmier,Ernest J.,Gaines,black,male,random,0.803973035,,no
+The glimpses of the moon,Edith,Wharton,white,female,random,0.813286894,,no
+Sanctuary,Edith,Wharton,white,female,random,0.813286894,,no
+Ladies almanack,Djuna,Barnes,white,female,random,0.813286894,,no
+Trust,Cynthia,Ozick,white,female,random,0.813286894,,no
+The world over,Edith,Wharton,white,female,random,0.813286894,,no
+The shipping news,Annie,Proulx,white,female,random,0.813286894,,no
+A garden of earthly delights,Joyce Carol,Oates,white,female,random,0.813286894,,no
+The member of the wedding,Carson,McCullers,white,female,random,0.813286894,,no
+Kindred,Octavia E,Butler,black,female,KJV_align,0.827617255,,no
+The fanatics,Paul Laurence,Dunbar,black,male,KJV_align,0.833513651,,no
+The color purple,Alice,Walker,black,female,random,0.851421603,,no
+Ugly ways,Tina McElroy,Ansa,black,female,random,0.851421603,,no
+Betsey Brown,Ntozake,Shange,black,female,random,0.851421603,,no
+Gorilla: my love,Toni Cade,Bambara,black,female,random,0.851421603,,no
+Sassafrass: Cypress & Indigo,Ntozake,Shange,black,female,random,0.851421603,,no
+Zami: a new spelling of my name,Audre,Lorde,black,female,random,0.851421603,,no
+The street,Ann,Petry,black,female,random,0.851421603,,no
+Plexus,Henry,Miller,white,male,KJV_align,0.867529298,,no
+J R,William,Gaddis,white,male,random,0.86809489,,no
+Tobacco road,Erskine,Caldwell,white,male,random,0.86809489,,no
+Lolita,Vladimir Vladimirovich,Nabokov,white,male,random,0.86809489,,no
+The lady of the Aroostook,William Dean,Howells,white,male,random,0.86809489,,no
+All the little live things,Wallace,Stegner,white,male,random,0.86809489,,no
+The long valley,John,Steinbeck,white,male,random,0.86809489,,no
+The Aspern papers,Henry,James,white,male,random,0.86809489,,no
+Burr,Gore,Vidal,white,male,random,0.86809489,,no
+Pnin,Vladimir Vladimirovich,Nabokov,white,male,random,0.86809489,,no
+The little lady of the big house,Jack,London,white,male,random,0.86809489,,no
+On the Road,Jack,Kerouac,white,male,random,0.86809489,,no
+Big Sur,Jack,Kerouac,white,male,random,0.86809489,,no
+The prince and the pauper,Mark,Twain,white,male,random,0.86809489,,no
+Dog soldiers,Robert,Stone,white,male,random,0.86809489,,no
+Big Sur and the oranges of Hieronymus Bosch,Henry,Miller,white,male,random,0.86809489,,no
+Great Jones Street,Don,DeLillo,white,male,random,0.86809489,,no
+Picture palace,Paul,Theroux,white,male,random,0.86809489,,no
+Ratner's star,Don,DeLillo,white,male,random,0.86809489,,no
+Suttree,Cormac,McCarthy,white,male,random,0.86809489,,no
+Tom Sawyer abroad,Mark,Twain,white,male,random,0.86809489,,no
+The third violet,Stephen,Crane,white,male,random,0.86809489,,no
+Breakfast at Tiffany's,Truman,Capote,white,male,random,0.86809489,,no
+Jerry of the islands,Jack,London,white,male,random,0.86809489,,no
+The scarlet plague,Jack,London,white,male,random,0.86809489,,no
+The blood oranges,John,Hawkes,white,male,random,0.86809489,,no
+Between the dark and the daylight,William Dean,Howells,white,male,random,0.86809489,,no
+The sheltering sky,Paul,Bowles,white,male,random,0.86809489,,no
+The wayward bus,John,Steinbeck,white,male,random,0.86809489,,no
+Myra Breckinridge,Gore,Vidal,white,male,random,0.86809489,,no
+The light of the star,Hamlin,Garland,white,male,random,0.86809489,,no
+The guest of Quesnay,Booth,Tarkington,white,male,random,0.86809489,,no
+The dragon of Wantley,Owen,Wister,white,male,random,0.86809489,,no
+The tyranny of the dark,Hamlin,Garland,white,male,random,0.86809489,,no
+On the stairs,Henry Blake,Fuller,white,male,random,0.86809489,,no
+When she was good,Philip,Roth,white,male,random,0.86809489,,no
+Harlequin and Columbine,Booth,Tarkington,white,male,random,0.86809489,,no
+Tender is the night,F. Scott,Fitzgerald,white,male,random,0.86809489,,no
+Some came running,James,Jones,white,male,random,0.86809489,,no
+The duke of Stockbridge,Edward,Bellamy,white,male,random,0.86809489,,no
+Bend sinister,Vladimir Vladimirovich,Nabokov,white,male,random,0.86809489,,no
+The flivver king,Upton,Sinclair,white,male,random,0.86809489,,no
+The sound and the fury,William,Faulkner,white,male,random,0.86809489,,no
+The lady in the lake,Raymond,Chandler,white,male,random,0.86809489,,no
+Cressy,Bret,Harte,white,male,random,0.86809489,,no
+Maruja,Bret,Harte,white,male,random,0.86809489,,no
+Pinocchio in Venice,Robert,Coover,white,male,random,0.86809489,,no
+The Little Regiment: and other episodes of the American Civil War,Stephen,Crane,white,male,random,0.86809489,,no
+The Argonauts of North Liberty,Bret,Harte,white,male,random,0.86809489,,no
+Nights with Uncle Remus,Joel Chandler,Harris,white,male,random,0.86809489,,no
+Lost in the Funhouse,John,Barth,white,male,KJV_align,0.870477035,,no
+Vanity of Duluoz,Jack,Kerouac,white,male,KJV_align,0.870477035,,no
+The Mosquito Coast,Paul,Theroux,white,male,KJV_align,0.870477035,,no
+The sirens of Titan,Kurt,Vonnegut,white,male,KJV_align,0.895124242,,no
+Americana,Don,DeLillo,white,male,KJV_align,0.895124242,,no
+Roger's version,John,Updike,white,male,KJV_align,0.895124242,,no
+My secret history,Paul,Theroux,white,male,KJV_align,0.895124242,,no
+To a god unknown,John,Steinbeck,white,male,KJV_align,0.896271081,,no
+Trinity fields,Bradford,Morrow,white,male,KJV_align,0.896271081,,no
+Passing by Samaria,Sharon Ewell,Foster,black,female,KJV_align,0.907658884,,no
+Captives of the flame,Samuel R,Delany,black,male,random,0.908613018,,no
+The autobiography of Miss Jane Pittman,Ernest J.,Gaines,black,male,random,0.908613018,,no
+Cold medina,Gary,Hardwick,black,male,random,0.908613018,,no
+A gathering of old men,Ernest J.,Gaines,black,male,random,0.908613018,,no
+The terrible threes,Ishmael,Reed,black,male,random,0.908613018,,no
+Uncle Tom's children,Richard,Wright,black,male,random,0.908613018,,no
+Double dead,Gary,Hardwick,black,male,random,0.908613018,,no
+All shot up,Chester B.,Himes,black,male,random,0.908613018,,no
+Losing battles,Eudora,Welty,white,female,KJV_align,0.958860693,,no
+Coffee will make you black,April,Sinclair,black,female,KJV_align,0.973116402,,no
+Devil in a blue dress,Walter,Mosley,black,male,random,1.019021039,,no
+Hog butcher,Ronald L,Fair,black,male,random,1.019021039,,no
+Delta wedding,Eudora,Welty,white,female,random,1.024476672,,no
+Youth and the bright Medusa,Willa,Cather,white,female,random,1.024476672,,no
+The chinaberry tree,Jessie Redmon,Fauset,black,female,KJV_align,1.030597493,,no
+Beloved,Toni,Morrison,black,female,KJV_align,1.030597493,Beloved,yes
+Breath: eyes: memory,Edwidge,Danticat,black,female,KJV_align,1.030597493,,no
+A flag for sunrise,Robert,Stone,white,male,KJV_align,1.044184489,,no
+Hudson river bracketed,Edith,Wharton,white,female,KJV_align,1.060848215,,no
+Pale horse: pale rider: three short novels,Katherine Anne,Porter,white,female,KJV_align,1.060848215,,no
+Gideon Planish,Sinclair,Lewis,white,male,KJV_align,1.082165048,,no
+Set this house on fire,William,Styron,white,male,KJV_align,1.082165048,,no
+Imago,Octavia E,Butler,black,female,random,1.085533611,,no
+And do remember me,Marita,Golden,black,female,random,1.085533611,,no
+The third life of Grange Copeland,Alice,Walker,black,female,random,1.085533611,,no
+The living is easy,Dorothy,West,black,female,random,1.085533611,,no
+Christmas every day,William Dean,Howells,white,male,random,1.112223103,,no
+Roderick Hudson,Henry,James,white,male,random,1.112223103,,no
+Trouble in July,Erskine,Caldwell,white,male,random,1.112223103,,no
+God's little acre,Erskine,Caldwell,white,male,random,1.112223103,,no
+Folks from Dixie,Paul Laurence,Dunbar,black,male,KJV_align,1.118204714,,no
+And all our wounds forgiven,Julius,Lester,black,male,KJV_align,1.118204714,,no
+Other voices: other rooms,Truman,Capote,white,male,KJV_align,1.119177295,,no
+The natural,Bernard,Malamud,white,male,KJV_align,1.119177295,,no
+The adventures of Augie March,Saul,Bellow,white,male,KJV_align,1.119177295,,no
+Humboldt's gift,Saul,Bellow,white,male,KJV_align,1.119177295,,no
+Slapstick,Kurt,Vonnegut,white,male,KJV_align,1.119177295,,no
+God's grace,Bernard,Malamud,white,male,KJV_align,1.119177295,,no
+The diagnosis,Alan P.,Lightman,white,male,KJV_align,1.119177295,,no
+Voodoo dreams,Jewell Parker,Rhodes,black,female,KJV_align,1.173264563,,no
+Nova,Samuel R,Delany,black,male,random,1.177219908,,no
+Blood on the forge,William,Attaway,black,male,random,1.177219908,,no
+This child's gonna live,Sarah E,Wright,black,female,KJV_align,1.182580312,This Child's Gonna Live,yes
+Tar baby,Toni,Morrison,black,female,KJV_align,1.220150611,,no
+Elmer Gantry,Sinclair,Lewis,white,male,KJV_align,1.261673593,,no
+Comedy: American style,Jessie Redmon,Fauset,black,female,random,1.265144134,,no
+Ain't gonna be the same fool twice,April,Sinclair,black,female,random,1.265144134,,no
+Heaven's my destination,Thornton,Wilder,white,male,KJV_align,1.326188353,,no
+The thanatos syndrome,Walker,Percy,white,male,KJV_align,1.326188353,,no
+Sarah Phillips,Andrea,Lee,black,female,KJV_align,1.332915197,,no
+The upper room,Mary,Monroe,black,female,KJV_align,1.332915197,,no
+Night rider,Robert Penn,Warren,white,male,KJV_align,1.34625659,,no
+Cotton comes to Harlem,Chester B.,Himes,black,male,random,1.379491355,,no
+The Avenue: Clayton City,C. Eric 1924-2000.  (Charles Eric),Lincoln,black,male,KJV_align,1.414649327,,no
+The big gold dream,Chester B.,Himes,black,male,KJV_align,1.500251846,,no
+The thin red line,James,Jones,white,male,KJV_align,1.528449922,,no
+Welcome to the monkey house,Kurt,Vonnegut,white,male,KJV_align,1.528449922,,no
+Manhattan transfer,John,Dos Passos,white,male,KJV_align,1.544063208,,no
+Tambourines to glory,Langston,Hughes,black,male,KJV_align,1.59130683,,no
+Long George Alley,Richard,Hall,black,male,KJV_align,1.603550206,,no
+Through the eye of the needle,William Dean,Howells,white,male,KJV_align,1.66165587,,no
+Soldiers' pay,William,Faulkner,white,male,KJV_align,1.66165587,,no
+Children of light,Robert,Stone,white,male,KJV_align,1.66165587,,no
+Jim the boy,Tony,Earley,white,male,KJV_align,1.66165587,,no
+The half-life of happiness,John,Casey,white,male,KJV_align,1.744297919,,no
+Mitch Miller,Edgar Lee,Masters,white,male,KJV_align,1.966782465,,no
+The grapes of wrath,John,Steinbeck,white,male,KJV_align,2.422268611,Grapes of Wrath,yes

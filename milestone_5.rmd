@@ -1,0 +1,117 @@
+---
+title: "Milestone 5"
+author: "Amanda Su"
+date: "3/30/2020"
+output: bookdown::pdf_document2
+bibliography: citation.bib
+link_citations: true
+---
+
+# Intro 
+```{r setup, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::write_bib(c("candidates"), "citation.bib", width = 60)
+
+library(tidyverse)
+library(janitor)
+library(rstanarm)
+library(ggrepel)
+library(dplyr)
+library(infer)
+library(gt)
+```
+
+This is my pdf document for my milestone 5 for GOV 1006. All analysis for this paper is available at my Github repository.^[[Github repository](https://github.com/amanda-y-su/race-voter-turnout)]. I make use of @candidates, @mobilization, @votes, @groups, and @ethnic.
+
+# Overview of Replication Paper 
+
+# Graphic
+
+```{r graphic, echo = FALSE, include = TRUE, warning = FALSE}
+
+#input data
+
+social_scores <- read.csv("SOCIAL_SCORES.csv")
+
+#extra only Bible alignments
+
+social_scores <- social_scores %>% 
+  filter(sample_group == "KJV_align")
+
+#set index column
+
+social_scores$idu <- as.numeric(row.names(social_scores))
+
+#plot the results
+
+plot <- ggplot(data = social_scores, 
+            aes(x = idu , y = score, label = labeled_points))
+
+plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
+  geom_point(aes(color = highlight), size = 1.2) + 
+  geom_text_repel(size = 3, nudge_y = .2, nudge_x = -.3) +
+  scale_y_continuous(limits = c(-1.2, 2.7)) +
+  scale_x_continuous(limits = c(1, 175)) +
+  labs(x = "", y = "Social Score", 
+       title="Social Score for All Novels Containing Alignments with the Bible", 
+       caption = "NOTE: Lower scores indicate novels where the Bible is less frequently cited in a 'social' way, as we define the term. \nScores closer to zero indicate novels where the 'social' and 'non-social' contexts are split evenly, as in James Baldwin's \nGo Tell it to the Mountain.\n\n Data obtained from 'Race, Writing, and Computation: Racial Difference and the US Novel' \nby Richard So, Hoyt Long, and Yuancheng Zhu") +
+  scale_color_manual(labels = c("yes", "no"), values = c("black", "red")) +
+  theme(legend.position = "", 
+        axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank(), 
+        axis.text=element_text(size=14), 
+        plot.caption = element_text(size = 8))
+
+```
+
+
+# Table
+
+```{r table, echo = FALSE}
+
+alignments <- read.csv("ALL_ALIGNMENTS.CSV") %>%
+  clean_names %>%
+  group_by(label, sourcematchcontext) %>%
+  summarize(n = n()) %>%
+  group_by(label) %>%
+  mutate(sum = sum(n)) %>%
+  ungroup() %>%
+  mutate(prop = sum/n()) %>%
+  group_by(label) %>%
+  sample_n(1) %>%
+  ungroup(label) %>%
+  filter(label == "Religion" | label == "Lyric" | label ==  "Law" | label == "Quote" | label ==  "Aphorism" | label == "Onom" | label == "SelfCite") %>%
+  mutate(categories = label) %>%
+  select(categories, sourcematchcontext, prop)
+  
+levels(alignments$categories) <- list("Aphorism/Saying" = "Aphorism", "Religious" = "Religion", 
+                                      "Lyric" = "Lyric", "Self-Citation" = "SelfCite", 
+                                      "Juridical" = "Law", "Quotation" = "Quote", 
+                                      "Onomatopoeia" = "Onom")
+
+table <- alignments %>%
+  gt() %>%
+  tab_header(
+    title = "Most Common Categories of Alignments After Bible",
+  ) %>%
+    fmt_percent(columns = vars(prop), decimals = 0) %>%
+   tab_options(
+    table.width = 100,
+    table.font.size = 15,
+    heading.title.font.size = 20,
+    heading.subtitle.font.size = 14,
+    column_labels.font.size = 17
+  ) %>%
+  cols_label(categories = "Categories", 
+             sourcematchcontext = "Examples", 
+             prop = "Proportion of Total") %>%
+  cols_align("left") %>%
+  cols_move_to_end(
+    columns = vars(sourcematchcontext)
+  )
+
+table
+```
+
+
+# References
