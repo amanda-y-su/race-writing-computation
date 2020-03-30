@@ -12,6 +12,8 @@ link_citations: true
 knitr::opts_chunk$set(echo = FALSE)
 knitr::write_bib(c("racial"), "citation.bib", width = 60)
 
+# load necessary packages 
+
 library(tidyverse)
 library(janitor)
 library(rstanarm)
@@ -25,39 +27,80 @@ This is my pdf document for my milestone 5 for GOV 1006. ^[All analysis for this
 
 # Overview of Replication Paper 
 A 300 – 500 word overview of your replication paper. What analysis did they run? What did they conclude?
-
+Our overall aim in this article, then, is to implement a computational study of race
+that is critical, reflexive, and interpretative, one that acknowledges the necessary
+limits of quantitative method (in particular its categorical logic) while exploring
+its affordances for thinking about racial difference at scale (its patterns and regularities). Indeed, we show how these limits and affordances can mutually inform
+one another, producing a mode of racial analysis and critique commensurable
+with foundational critical race studies but also with more recent work in the field
+by scholars who have sought to destabilize even further the solidity of “blackness”
+8Henry Louis Gates, “Editor’s Introduction,” Critical Inquiry (Autumn 1985), 15.
+9Gates, “Editor’s Introduction,” 15.
+4
+Cultural Analytics Race, Writing, and Computation
+as an interpretive category. In concrete terms, we develop a case study focused
+on race, religion, and the US novel. We build a model to test if novelists marked
+as “white” versus “black” produce different narratological effects with respect to
+the interaction of race and religious authority, in particular the authority of the
+Bible. We then identify a set of general patterns in these effects that we interpret
+through our model’s reliance on reified categories of racial identity. Finally, we
+propose a method for deforming this very categorical thinking. To wit, we reread the same large-scale patterns through outliers that trouble this thinking as
+it exists in our model, but also as it is found lurking by black studies scholars in
+their field’s own interpretive practices. Switching to the kind of relational thinking advocated by some of these scholars, we read categories into continuums,
+and again into new categories that imagine race as a social assemblage, thereby
+charting a computational path beyond critique.
 
 # Graphic
 
 ```{r graphic, echo = FALSE, include = TRUE, warning = FALSE}
 
-#input data
+# read in social scores data
 
 social_scores <- read.csv("SOCIAL_SCORES.csv")
 
-#extra only Bible alignments
+# extract only Bible alignments
 
 social_scores <- social_scores %>% 
   filter(sample_group == "KJV_align")
 
-#set index column
+# set index column
 
 social_scores$idu <- as.numeric(row.names(social_scores))
 
-#plot the results
+# plot the results in a ggplot where the x axis is the index and the y axis is the social score
 
 plot <- ggplot(data = social_scores, 
             aes(x = idu , y = score, label = labeled_points))
 
+# add a line that delineates the x axis 
+
 plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
+  
+  # plot points for each of the observations
+  
   geom_point(aes(color = highlight), size = 1.2) + 
+  
+  # add text directly to the plot to label points 
+  
   geom_text_repel(size = 3, nudge_y = .2, nudge_x = -.3) +
+  
+  # set the limits of the axes for readability 
+  
   scale_y_continuous(limits = c(-1.2, 2.7)) +
   scale_x_continuous(limits = c(1, 175)) +
+  
+  # add labels and titles 
+  
   labs(x = "", y = "Social Score", 
        title="Social Score for All Novels Containing Alignments with the Bible", 
        caption = "NOTE: Lower scores indicate novels where the Bible is less frequently cited in a 'social' way, as we define the term. \nScores closer to zero indicate novels where the 'social' and 'non-social' contexts are split evenly, as in James Baldwin's \nGo Tell it to the Mountain.\n\n Data obtained from 'Race, Writing, and Computation: Racial Difference and the US Novel' \nby Richard So, Hoyt Long, and Yuancheng Zhu") +
+  
+  # adjust colors of the different points so they're easier to see
+  
   scale_color_manual(labels = c("yes", "no"), values = c("black", "red")) +
+  
+  # adjust font sizes for readability and aesthetics 
+  
   theme(legend.position = "", 
         axis.text.x = element_blank(), 
         axis.ticks.x = element_blank(), 
@@ -71,32 +114,79 @@ plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
 
 ```{r table, echo = FALSE}
 
+# read in the alignments data
+
 alignments <- read.csv("ALL_ALIGNMENTS.CSV") %>%
+  
+  # clean names so they're easier to type and work with 
+  
   clean_names %>%
+  
+  # group by label and examples of sources so that I count how many unique observations there are 
+  
   group_by(label, sourcematchcontext) %>%
+  
+  # use summarize to count the number of unique observations
+  
   summarize(n = n()) %>%
+  
+  # group by label again to sum the total number of observations per category
+  
   group_by(label) %>%
+  
+  # count the number of observations per category and assign to sum 
+  
   mutate(sum = sum(n)) %>%
+  
+  # ungroup data to divide this sum by the total number of observations to get the proportion
+  
   ungroup() %>%
   mutate(prop = sum/n()) %>%
+  
+  # group by label again to randomly pick one observation for the example per category 
+  
   group_by(label) %>%
   sample_n(1) %>%
+  
+  # ungroup by label 
+  
   ungroup(label) %>%
+  
+  # filter for only the categories present in the table 
+  
   filter(label == "Religion" | label == "Lyric" | label ==  "Law" | label == "Quote" | label ==  "Aphorism" | label == "Onom" | label == "SelfCite") %>%
+  
+  # rename label as categories 
+  
   mutate(categories = label) %>%
+  
+  # select for only the variables of interest: categories, sourcematchcontext, proportion
+  
   select(categories, sourcematchcontext, prop)
   
+# rename the levels in categories so they match the ones in the paper
 levels(alignments$categories) <- list("Aphorism/Saying" = "Aphorism", "Religious" = "Religion", 
                                       "Lyric" = "Lyric", "Self-Citation" = "SelfCite", 
                                       "Juridical" = "Law", "Quotation" = "Quote", 
                                       "Onomatopoeia" = "Onom")
 
+# create a gt table using the alignments data
+
 table <- alignments %>%
   gt() %>%
+  
+  # add a header
+  
   tab_header(
     title = "Most Common Categories of Alignments After Bible",
   ) %>%
+  
+  # format the proportion column so it's in percent format 
+  
     fmt_percent(columns = vars(prop), decimals = 0) %>%
+  
+  # adjust the width and font size of the text in the table for readability 
+  
    tab_options(
     table.width = 100,
     table.font.size = 15,
@@ -104,15 +194,26 @@ table <- alignments %>%
     heading.subtitle.font.size = 14,
     column_labels.font.size = 17
   ) %>%
+  
+  # label the different columns
+  
   cols_label(categories = "Categories", 
              sourcematchcontext = "Examples", 
              prop = "Proportion of Total") %>%
+  
+  # left align the columns
   cols_align("left") %>%
+  
+  # move the examples column to the end as the table in the paper does 
+  
   cols_move_to_end(
     columns = vars(sourcematchcontext)
   )
 
+# display the table 
+
 table
+
 ```
 
 
