@@ -10,7 +10,7 @@ link_citations: true
 # Intro 
 ```{r setup, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-knitr::write_bib(c("candidates"), "citation.bib", width = 60)
+knitr::write_bib(c("racial"), "citation.bib", width = 60)
 
 library(tidyverse)
 library(janitor)
@@ -21,9 +21,11 @@ library(infer)
 library(gt)
 ```
 
-This is my pdf document for my milestone 5 for GOV 1006. All analysis for this paper is available at my Github repository.^[[Github repository](https://github.com/amanda-y-su/race-voter-turnout)]. I make use of @candidates, @mobilization, @votes, @groups, and @ethnic.
+This is my pdf document for my milestone 5 for GOV 1006. ^[All analysis for this paper is available at my [Github repository](https://github.com/amanda-y-su/race-writing-computation)]. I make use of @racial, @literary, @afro-american, @essays, and @traces.
 
 # Overview of Replication Paper 
+A 300 – 500 word overview of your replication paper. What analysis did they run? What did they conclude?
+
 
 # Graphic
 
@@ -65,7 +67,7 @@ plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
 ```
 
 
-# Table
+# Appendix
 
 ```{r table, echo = FALSE}
 
