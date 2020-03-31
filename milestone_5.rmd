@@ -26,29 +26,8 @@ library(gt)
 This is my pdf document for my milestone 5 for GOV 1006. ^[All analysis for this paper is available at my [Github repository](https://github.com/amanda-y-su/race-writing-computation)]. I make use of @racial, @literary, @afro-american, @essays, and @traces.
 
 # Overview of Replication Paper 
-A 300 – 500 word overview of your replication paper. What analysis did they run? What did they conclude?
-Our overall aim in this article, then, is to implement a computational study of race
-that is critical, reflexive, and interpretative, one that acknowledges the necessary
-limits of quantitative method (in particular its categorical logic) while exploring
-its affordances for thinking about racial difference at scale (its patterns and regularities). Indeed, we show how these limits and affordances can mutually inform
-one another, producing a mode of racial analysis and critique commensurable
-with foundational critical race studies but also with more recent work in the field
-by scholars who have sought to destabilize even further the solidity of “blackness”
-8Henry Louis Gates, “Editor’s Introduction,” Critical Inquiry (Autumn 1985), 15.
-9Gates, “Editor’s Introduction,” 15.
-4
-Cultural Analytics Race, Writing, and Computation
-as an interpretive category. In concrete terms, we develop a case study focused
-on race, religion, and the US novel. We build a model to test if novelists marked
-as “white” versus “black” produce different narratological effects with respect to
-the interaction of race and religious authority, in particular the authority of the
-Bible. We then identify a set of general patterns in these effects that we interpret
-through our model’s reliance on reified categories of racial identity. Finally, we
-propose a method for deforming this very categorical thinking. To wit, we reread the same large-scale patterns through outliers that trouble this thinking as
-it exists in our model, but also as it is found lurking by black studies scholars in
-their field’s own interpretive practices. Switching to the kind of relational thinking advocated by some of these scholars, we read categories into continuums,
-and again into new categories that imagine race as a social assemblage, thereby
-charting a computational path beyond critique.
+
+The authors of the paper "Race, Writing, and Computation: Racial Difference and the US Novel, 1880-2000" seek to implement a computational study of race that explores how computation can present new opportunities for thinking about racial difference and its  patterns and regularities at scale. They develop a case study that focuses on race, religion, and the United States novel and build a model that tests if novelists marked as “white” versus “black” produce different narratological effects with respect to the interaction of race and religious authority, in particular, the authority of the Bible. In simpler terms, do writers identified as racially different contextualize the Bible in different ways in their novels? Then, the authors identify a set of general patterns in these effects that they interpret through the model’s reliance on concrete categories of racial identity. The ultimate aim of this is to propose a method for deforming this very categorical thinking. The authors' logistic regression model reveals the relationship of race, gender, and biblical citation to the “sociality” of contexts where the Bible is quoted. That is, they model the relationship between the “Bible” and “race” variables to determine what are the odds of a Bible context being “social” increases or decreases based on the race variable, the options being "white" or "black." For the purposes of this paper, moments of sociality, are defined as the presence of two or more characters engaged in dialogue or interaction. The question at hand is how a writer's identity as "white" or "black" significantly changes the likelihood that the scene of their citation of the Bible in their work is “social”. The study ultimately finds that when a white writer quotes the Bible, it is less likely that she/he quotes it in a social context compared to when she/he writes about non-Bible related topics. However, when a black writer quotes the Bible, it is more likely that she/he quotes it in a social context.
 
 # Graphic
 
@@ -211,10 +190,12 @@ table <- alignments %>%
   )
 
 # display the table 
+# two things I couldn't figure out are how to display the table on the pdf such that it isn't cut off
+# and why the screenshot of the table from the paper displays in the middle of the bibiliography
 
 table
 
 ```
-
+![Screenshot of Table.](table.png)
 
 # References
