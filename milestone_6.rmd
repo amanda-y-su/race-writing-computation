@@ -6,11 +6,6 @@ output: html_document
 bibliography: citation.bib
 link_citations: true
 ---
-Milestone #6. Submit a PDF or html via Canvas. (I usually do everything in html until the very end of the process to avoid spending too much time fussing with annoying formating issues. We required you to submit that last two milestones in PDF in order to ensure that your computer was set up properly. The final submission will be in PDF.) In addition to the the elements from Milestone #5, your paper should include:
-
-An Appendix in which you replicate all results — or all the important results — from your paper. As with other aspects of this project, the exact requirements will vary across students, depending on the complexity of your replication paper. If you paper only has 3 or 4 tables, we expect you to replicate it all. If it has 50 tables, we do not expect that. Use your best judgment and talk with us. You must replicate any result which you plan to use as the base of your extension.
-A clear statement about what aspects of the paper you were able to replicate and which parts, if any, you were not able to replicate.
-500 words about your proposed extension. You do not have to have done the extension yet. (That comes next week.) But it is time to start thinking about what your contribution to human knowledge will be. You seek admission to the School of Athens. What do you have to offer us?
 
 # Intro 
 ```{r setup, echo = FALSE, include = FALSE}
@@ -27,6 +22,8 @@ library(dplyr)
 library(infer)
 library(gt)
 library(broom)
+library(formattable)
+library(expss)
 
 ```
 
@@ -156,7 +153,7 @@ levels(alignments$categories) <- list("Aphorism/Saying" = "Aphorism", "Religious
                                       "Juridical" = "Law", "Quotation" = "Quote", 
                                       "Onomatopoeia" = "Onom")
 
-# create a gt table using the alignments data
+# create a table using the alignments data
 
 table <- alignments %>%
   gt() %>%
@@ -196,45 +193,70 @@ table <- alignments %>%
     columns = vars(sourcematchcontext)
   )
 
-# display the table 
-# two things I couldn't figure out are how to display the table on the pdf such that it isn't cut off
-# and why the screenshot of the table from the paper displays in the middle of the bibiliography
-
-table
+# display the summary table 
 
 ```
 ![Screenshot of Table.](table.png)
 
 ```{r model-tables}
 
-data <- read.csv("./TAGGED_CONTEXTS.csv")[,-1]
-fit1 <- stan_glmer(social ~ gender + race + bible + gender:bible + race:bible + (1|title), data=data, family=binomial, refresh = 0)
-fit2 <- stan_glmer(social ~ gender + race + bible + race:bible + (1|title), data=data, family=binomial, refresh = 0)
+model_data <- read.csv("./TAGGED_CONTEXTS.csv")[,-1]
+
+fit1 <- stan_glmer(social ~ gender + race + bible + gender:bible + race:bible + (1|title), data=model_data, family=binomial, refresh = 0)
 
 table_1 <- tidy(fit1) %>%
   filter(term %in% c("(Intercept)", "gender", "race", "bible", "gender:bible", "race:bible")) %>%
-  mutate_if(is.numeric, funs(round(., 3))) %>%
-  gt() %>%
-  cols_label(term = "Term", 
-             estimate = "Estimate",
-             std.error = "Standard Error")
+  mutate_if(is.numeric, funs(round(., 3))) 
 
-table_1
+formattable(table_1)
+
+```
+
+
+```{r model-tables2}
+fit2 <- stan_glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, family=binomial, refresh = 0)
 
 table_2 <- tidy(fit2) %>%
-  filter(term %in% c("(Intercept)", "gender", "race", "bible", "race:bible")) %>%
-  mutate_if(is.numeric, funs(round(., 3))) %>%
-  gt() %>%
-  cols_label(term = "Term", 
-             estimate = "Estimate",
-             std.error = "Standard Error")
+  filter(term %in% c("(Intercept)", "gender", "race", "bible", "race:bible")) %>%s
+  mutate_if(is.numeric, funs(round(., 3))) 
 
-table_2
+formattable(table_2)
 
 ```
 
-```{r}
-```
+```{r predicted}
 
+score = coef(fit2)$title
+
+model_data$score = numeric(nrow(model_data))
+for (title in unique(model_data$title)) {
+	model_data$score[model_data$title==title] = score[title,1]
+}
+
+titles = unique(model_data$title)
+data.unique = data.frame(title=titles,
+                         race=factor(rep("white",length(titles)),levels=c("white","black")),
+                         gender=factor(rep("female",length(titles)),levels=c("female","male")),
+                         bible = factor(rep("yes", length(titles)), levels = c("yes", "no")),
+                         score=numeric(length(titles)))
+for (i in 1:length(titles)) {
+	data.unique$race[i] = ifelse(data$race[data$title==titles[i]][1]==0,"white","black")
+	data.unique$gender[i] = ifelse(data$gender[data$title==titles[i]][1]==0,"female","male")
+	data.unique$bible[i] = ifelse(data$bible[data$title==titles[i]][1]==0,"yes","no")
+	data.unique$score[i] = score[titles[i],1]
+}
+
+predicted <- data.unique %>%
+  distinct() %>%
+  select(-title) %>%
+  group_by(race, gender, bible) %>%
+  summarize(prop = sum(score > 0)/n(),
+            prop_not = sum(score < 0)/n()) %>%
+  mutate(odds = prop/prop_not) %>%
+  mutate_if(is.numeric, funs(round(., 3))) 
+
+formattable(predicted)
+         
+```
 
 # References
