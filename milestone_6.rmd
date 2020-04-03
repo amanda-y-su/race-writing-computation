@@ -8,7 +8,7 @@ link_citations: true
 ---
 
 # Intro 
-```{r setup, echo = FALSE, include = FALSE}
+```{r setup, echo = FALSE, include = FALSE, warning = FALSE, message = FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::write_bib(c("racial"), "citation.bib", width = 60)
 
@@ -153,50 +153,11 @@ levels(alignments$categories) <- list("Aphorism/Saying" = "Aphorism", "Religious
                                       "Juridical" = "Law", "Quotation" = "Quote", 
                                       "Onomatopoeia" = "Onom")
 
-# create a table using the alignments data
-
-table <- alignments %>%
-  gt() %>%
-  
-  # add a header
-  
-  tab_header(
-    title = "Most Common Categories of Alignments After Bible",
-  ) %>%
-  
-  # format the proportion column so it's in percent format 
-  
-    fmt_percent(columns = vars(prop), decimals = 0) %>%
-  
-  # adjust the width and font size of the text in the table for readability 
-  
-   tab_options(
-    table.width = 1000,
-    table.font.size = 15,
-    heading.title.font.size = 20,
-    heading.subtitle.font.size = 14,
-    column_labels.font.size = 17
-  ) %>%
-  
-  # label the different columns
-  
-  cols_label(categories = "Categories", 
-             sourcematchcontext = "Examples", 
-             prop = "Proportion of Total") %>%
-  
-  # left align the columns
-  cols_align("left") %>%
-  
-  # move the examples column to the end as the table in the paper does 
-  
-  cols_move_to_end(
-    columns = vars(sourcematchcontext)
-  )
-
 # display the summary table 
 
+formattable(alignments)
+
 ```
-![Screenshot of Table.](table.png)
 
 ```{r model-tables}
 
@@ -214,11 +175,14 @@ formattable(table_1)
 
 
 ```{r model-tables2}
-fit2 <- stan_glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, family=binomial, refresh = 0)
+library(lme4)
+
+fit2 <- glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, nAGQ=0, family=binomial, refresh = 0)
 
 table_2 <- tidy(fit2) %>%
-  filter(term %in% c("(Intercept)", "gender", "race", "bible", "race:bible")) %>%s
-  mutate_if(is.numeric, funs(round(., 3))) 
+  filter(term %in% c("(Intercept)", "gender", "race", "bible", "race:bible")) %>%
+  mutate_if(is.numeric, funs(round(., 3))) %>%
+  select(-group)
 
 formattable(table_2)
 
@@ -240,9 +204,9 @@ data.unique = data.frame(title=titles,
                          bible = factor(rep("yes", length(titles)), levels = c("yes", "no")),
                          score=numeric(length(titles)))
 for (i in 1:length(titles)) {
-	data.unique$race[i] = ifelse(data$race[data$title==titles[i]][1]==0,"white","black")
-	data.unique$gender[i] = ifelse(data$gender[data$title==titles[i]][1]==0,"female","male")
-	data.unique$bible[i] = ifelse(data$bible[data$title==titles[i]][1]==0,"yes","no")
+	data.unique$race[i] = ifelse(model_data$race[model_data$title==titles[i]][1]==0,"white","black")
+	data.unique$gender[i] = ifelse(model_data$gender[model_data$title==titles[i]][1]==0,"female","male")
+	data.unique$bible[i] = ifelse(model_data$bible[model_data$title==titles[i]][1]==0,"yes","no")
 	data.unique$score[i] = score[titles[i],1]
 }
 
