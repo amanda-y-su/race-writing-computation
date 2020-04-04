@@ -24,6 +24,7 @@ library(gt)
 library(broom)
 library(formattable)
 library(expss)
+library(lme4)
 
 ```
 
@@ -165,13 +166,32 @@ formattable(alignments)
 
 ```{r model-tables, echo = FALSE, warning = FALSE, message = FALSE}
 
+# read in data from tagged contexts
+
 model_data <- read.csv("./TAGGED_CONTEXTS.csv")[,-1]
+
+# create a model that explains whether or not a the Bible is contextualized in a social way as a 
+# function of the gender of the author, the race of the author, whether or not the Bible was 
+# cited, the interaction between the author's gender and the bible variable, the interaction between 
+# the race of the author and bible and the random effect of title (the novel)
+
+# I used stan_glmer as opposed to stan_glm because I am creating a mixed model with a random effect
 
 fit1 <- stan_glmer(social ~ gender + race + bible + gender:bible + race:bible + (1|title), data=model_data, family=binomial, refresh = 0)
 
+# turn model into a tidy tibble
+
 table_1 <- tidy(fit1) %>%
+  
+  # filter for the terms in the model 
+  
   filter(term %in% c("(Intercept)", "gender", "race", "bible", "gender:bible", "race:bible")) %>%
+  
+  # round values in the model to three decimal places
+  
   mutate_if(is.numeric, funs(round(., 3))) 
+
+# display the table 
 
 formattable(table_1)
 
@@ -180,14 +200,30 @@ formattable(table_1)
 **Table 3: Model 2**
 
 ```{r model-tables2, echo = FALSE, warning = FALSE, message = FALSE}
-library(lme4)
+
+# create a model that explains social as a function of race, bible, the interaction of race and bible
+# and the random effect of title (novel)
 
 fit2 <- glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, nAGQ=0, family=binomial, refresh = 0)
 
+# turn model into a tidy tibble
+
 table_2 <- tidy(fit2) %>%
+  
+  # filter for the terms in the model 
+  
   filter(term %in% c("(Intercept)", "gender", "race", "bible", "race:bible")) %>%
+  
+  # round 
   mutate_if(is.numeric, funs(round(., 3))) %>%
+  
+  # unselect the group column since it isn't relevant to the table 
+  # all it displays is the fact that the coefficients represent the fixed effects of variables and that 
+  # novel is a random effect 
+  
   select(-group)
+
+# display the table
 
 formattable(table_2)
 
@@ -198,34 +234,76 @@ formattable(table_2)
 
 ```{r predicted, echo = FALSE, warning = FALSE, message = FALSE}
 
+# calculate the social scores of each of the texts using the coefficients from the second model 
+
 score = coef(fit2)$title
+
+# add a score column to the model_data tibble 
 
 model_data$score = numeric(nrow(model_data))
 for (title in unique(model_data$title)) {
 	model_data$score[model_data$title==title] = score[title,1]
 }
 
+# preserve only the unique titles/movels in the tibble 
+
 titles = unique(model_data$title)
+
+# create a new data.unique tibble with factor variables race, gender, bible, and score which will use the 
+# numerical values from the original tibble and replace them with categorical levels below
+
 data.unique = data.frame(title=titles,
                          race=factor(rep("white",length(titles)),levels=c("white","black")),
                          gender=factor(rep("female",length(titles)),levels=c("female","male")),
                          bible = factor(rep("yes", length(titles)), levels = c("yes", "no")),
                          score=numeric(length(titles)))
+
+# 
 for (i in 1:length(titles)) {
+  
+  # set the levels for each of the indicator variables: race, gender, and bible 
+  
 	data.unique$race[i] = ifelse(model_data$race[model_data$title==titles[i]][1]==0,"white","black")
 	data.unique$gender[i] = ifelse(model_data$gender[model_data$title==titles[i]][1]==0,"female","male")
 	data.unique$bible[i] = ifelse(model_data$bible[model_data$title==titles[i]][1]==0,"yes","no")
 	data.unique$score[i] = score[titles[i],1]
 }
 
+# calculate the predicted probabilities using the data.unique tibble 
+
 predicted <- data.unique %>%
+  
+  # keep only the unique observations so there aren't duplicates
+  
   distinct() %>%
+  
+  # unselect the title column since it isn't relevant to the calculations of predicted probabilities 
+  
   select(-title) %>%
+  
+  # group the data by race, gender, and bible so calculate the predicted probabilities for each condition 
+  
   group_by(race, gender, bible) %>%
+  
+  # calculate the proportion of observations in each condition group where the social score is greater than 
+  # zero, that is the bible is cited in a social context 
+  
   summarize(prop = sum(score > 0)/n(),
+            
+            # calculate the proportion of observations in each condition group where the social score 
+            # is less than zero, that is the bible is not cited in a social context 
+            
             prop_not = sum(score < 0)/n()) %>%
+  
+  # create a column that calculates the odds of each of the conditions being social 
+  
   mutate(odds = prop/prop_not) %>%
+  
+  # round every value to three decimal places 
+  
   mutate_if(is.numeric, funs(round(., 3))) 
+
+# display predicted probabilities table 
 
 formattable(predicted)
          
