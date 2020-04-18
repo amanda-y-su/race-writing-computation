@@ -25,7 +25,6 @@ library(formattable)
 library(expss)
 library(lme4)
 library(stargazer)
-library(tidybayes)
 library(ggridges)
 
 ```
