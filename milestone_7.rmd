@@ -72,7 +72,9 @@ fit_robust <- stan_glm(social ~ gender + race + bible + race:bible, data=model_d
 
 stargazer(data.frame(fit_robust), type = "latex",
           summary.stat = c("mean", "sd"),
-          covariate.labels = c("Intercept", "Author's Gender", "Author's Race", "Citation of Bible", "Race:Bible"))
+          covariate.labels = c("Intercept", "Author's Gender", "Author's Race", "Citation of Bible", "Race:Bible"), 
+          title = "Effect of Author Gender, Race, Bible Citation, and Race and Bible's Interaction on the 
+          Sociality of a Text")
 ```
 
 **Graphic 1: Distribution of Coefficients on Author Gender, Race, Bible Citation, and the Interaction of the Latter Two**
@@ -266,4 +268,3 @@ plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
 Results from So, Long, and Zhu (2019) were successfully replicated.^[All analysis for this paper is available at my [Github repository](https://github.com/amanda-y-su/race-writing-computation).]
 
 ## References
-
