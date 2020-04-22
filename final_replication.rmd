@@ -1,0 +1,269 @@
+---
+title: "Milestone 7"
+author: "Amanda Su"
+date: "4/15/2020"
+output: bookdown::pdf_document2
+bibliography: citation.bib
+link_citations: true
+---
+
+```{r setup, echo = FALSE, include = FALSE, warning = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::write_bib(c("racial"), "citation.bib", width = 60)
+
+# load necessary packages 
+
+library(tidyverse)
+library(janitor)
+library(rstanarm)
+library(ggrepel)
+library(dplyr)
+library(infer)
+library(gt)
+library(broom)
+library(formattable)
+library(expss)
+library(lme4)
+library(stargazer)
+library(ggridges)
+
+```
+
+## Abstract
+
+@racial built a model that tests if novelists marked as “white” versus “black” produce different narratological effects with respect to the interaction of race and religious authority, in particular, the authority of the Bible. The study ultimately finds that when a white writer cites the Bible, it is less likely that she/he quotes it in a social context compared to when she/he writes about non-Bible related topics. However, when a black writer cites the Bible, it is more likely that she/he quotes it in a social context. I was able to successfully replicate the results of the authors' paper. For my extension, I decided to reconstruct the paper's primary model using a Bayesian approach. I found that the results of the model were largely the same the as that of the original. These robust results corroborate the author's conclusions about how race and writing intersect across more than a century of US fiction
+
+## Introduction
+
+TO BE WRITTEN
+
+Can computational methods tell us anything new and interesting about how racial difference is expressed in literature? Do authors of different racial identifications (for example, “white” versus “black”) consistently use different patterns of language, style, and narrative, and if so, what are these patterns? Do they remain stable or change over time? 
+
+## Literature Review and Paper Review
+
+This scholarly project bridges two scholarly fields historically seen as incompatible: cultural analytics (also known as “computational criticism”) and critical race studies. It does so by discovering generative points of contact between data science and critique, two sets of methods typically viewed as antithetical. Cultural analytics is an emerging field wherein humanist scholars leverage the in- creasing availability of large digital materials and the affordances of new computa- tional tools. This allows them to study, for example, semantic and narratological patterns in the English-language novel at the scale of centuries and across tens-of- thousands of texts. While cutural analytics scholars have taken on an expanding array of topics, including genre and cultural prestige, the topic of race and racial difference has remained relatively understudied. Since computational methods demand the quantification of one’s objects of study, it’s likely easier to accept measuring a novel’s popularity by sales figures or classifying its genre by diction than labeling it according to discrete racial identifiers. Such labeling is an affront to critical race studies, the mission of which is the deconstruction of racial categories. As such, recent scholarship on the relationship between computation and race has been critique-oriented. Scholars of science and technology, such as Cathy O’Neil and Safiya A. Noble, have documented how computational algorithms used by banks and online search engines intensify racial stratification and oppression by articulating racial minorities as fixed, quantified types that reinforce existing patterns of social inequality. Tara McPherson has shown that the history of modern computation is deeply intertwined with the history of racial formation in the US since the 1960s. The authors of this paper uses a computational model to study race and literature in order to determine both the model’s affordances and its inadequacies. I make use of @literary, @afro-american, @essays, and @traces.
+
+TO BE EDITED AND COMPLETED
+
+## Replication
+
+To test their theory about novelists of different races producing different narratological effects in their works with respect to the Bible, the authors constructed a model that explains whether or not a text is "social" as a function of the author's gender, race, whether or not they cited the Bible as a control variable, the interaction of the race and bible variables, and the random effect for each novel. For the purposes of this paper, moments of sociality are defined as the presence of two or more characters engaged in dialogue or interaction. 
+
+I was able to successfully replicate every aspect of the paper.
+
+## Extension
+
+**Table 1: Effect of Author Gender, Race, Bible Citation, and Race and Bible's Interaction on the Sociality of a Text**
+
+```{r model, results = "asis", message = FALSE}
+
+# read in data from tagged contexts
+
+model_data <- read.csv("original-paper/./TAGGED_CONTEXTS.csv")[,-1]
+
+# create a model that explains social as a function of race, bible, the interaction of race and bible
+# and the random effect of title (novel)
+# I use the function stan_glm 
+
+fit_robust <- stan_glm(social ~ gender + race + bible + race:bible, data=model_data, family=binomial, refresh = 0)
+
+# display the terms of the model in a table
+
+stargazer(data.frame(fit_robust), type = "latex",
+          summary.stat = c("mean", "sd"),
+          covariate.labels = c("Intercept", "Author's Gender", "Author's Race", "Citation of Bible", "Race:Bible"), 
+          title = "Effect of Author Gender, Race, Bible Citation, and Race and Bible's Interaction on the 
+          Sociality of a Text")
+```
+
+**Graphic 1: Distribution of Coefficients on Author Gender, Race, Bible Citation, and the Interaction of the Latter Two**
+
+```{r plot, results = "asis", message = FALSE}
+
+# create a plot that displays the distributions of the coefficients and intercept in the model 
+
+pplot <- plot(fit_robust, "areas", prob = 0.95, prob_outer = 1) + 
+  
+  # add a vertical line to the plot at the x intercept 
+  
+  geom_vline(xintercept = 0) + 
+  
+  # add labels 
+  
+  labs(y = "Terms in the Model", x = "Value", title = "Distributions of Terms in Modified Model", subtitle = "Model explains a text's sociality as a function of author race, gender, \ncitation of Bible, and the interaction of race and bible citation")
+
+# display plot 
+
+pplot
+```
+
+**Graphic 2: Distribution of Predicted Likelihoods of a Text Being Social Given An Author's Race, Gender, and Citation of the Bible in Their Work**
+
+```{r posterior, results = "asis", message = FALSE}
+
+# I create a tibble of fake data with eight observations for each of the eight conditions: 
+# white female, no Bible citation
+# white female, Bible citation
+# white male, no Bible citation
+# white male, Bible citation
+# black female, no Bible citation
+# black female, Bible citation
+# black male, no Bible citation
+# black male, no Bible citation
+
+tibble <- tibble(race = c(1, 1, 1, 1, 0, 0, 0, 0), gender = c(0, 0, 1, 1, 0, 0, 1, 1), bible = c(0, 1, 0, 1, 0, 1,0,1))
+
+# find the predicted likelihoods of a text being marked as "social" given the above conditions 
+# (race, gender, citation of Bible) using my model and fake data 
+
+linpred <- posterior_linpred(fit_robust, transform = TRUE, newdata = tibble) %>%
+  
+  # convert matrix to tibble for easier manipulation
+  
+  as_tibble() %>%
+  
+  # combine the eight columns for individual texts into one column
+
+  pivot_longer(cols = 1:8) %>%
+  
+  # mutate the levels under the "name" column so that they are more informative, including information about the 
+  # race and gender of the author and whether or not the Bible was cited 
+  
+  mutate(name = ifelse(name == "1", "Black Female, No Bible", 
+                       ifelse(name == "2", "Black Female, Bible", 
+                              ifelse(name == "3", "Black Male, No Bible",
+                                     ifelse(name == "4", "Black Male, Bible", 
+                                            ifelse(name == "5", "White Female, No Bible", 
+                                                   ifelse(name == "6", "White Female, Bible",
+                                                          ifelse(name == "7", "White Male, No Bible", 
+                                                                 "White Male, Bible")))))))) %>%
+  
+  # transform the column with the predicted probabilities using plogis to obtain the probability for the given 
+  # log odds values
+  
+  mutate(value = plogis(value)) %>%
+  
+  # create plot with x axis as the predicted likelihoods of a text being assigned "social", y axis as the condition,    # and with the data grouped by condition
+
+  ggplot(aes(x = value, y = name, group = name)) +
+  
+  # create a density ridges plot showing the distribution of predicted likelihoods across the various conditions
+
+  geom_density_ridges() +
+  
+  # format density ridges plot for easier readability
+
+  theme_ridges() + 
+  
+  # add titles and labels
+  
+  labs(x = "Probability", y = "Condition", title = "Distributions of a Text's Predicted Likelihood \nof Being Assigned as Social Given \nSpecified Conditions")
+
+# display plot of predicted probabilities 
+
+linpred
+
+```
+
+Whereas @racial decided to perform a maximum likelihood estimation of generalized linear models to determine the predicted values of model coefficients, I perform a full Bayesian estimation full Bayesian estimation to find the average expected values for coefficients. @statistical wrote that expected value averages are preferrable to  predicted values because the latter contains both fundamental and estimation uncertainty, whereas the former only has to account for the estimation uncertainty caused by not having an infinite number of observations. As a result, predicted values have a larger variance than expected values. I ultimately found that the primary results of the authors' paper are largely unchanged even when using a Bayesian approach to create the model. 
+
+## Appendix
+
+```{r model1, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE}
+
+# read in data from tagged contexts
+
+model_data <- read.csv("original-paper/./TAGGED_CONTEXTS.csv")[,-1]
+
+# create a model that explains whether or not a the Bible is contextualized in a social way as a 
+# function of the gender of the author, the race of the author, whether or not the Bible was 
+# cited, the interaction between the author's gender and the bible variable, the interaction between 
+# the race of the author and bible and the random effect of title (the novel)
+
+fit1 <- glmer(social ~ gender + race + bible + gender:bible + race:bible + (1|title), nAGQ=0, data=model_data, family=binomial, refresh = 0)
+
+# print model
+
+print(fit1, digits = 3)
+
+```
+
+```{r model2, echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+
+# create a model that explains social as a function of race, bible, the interaction of race and bible
+# and the random effect of title (novel)
+
+fit2 <- glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, nAGQ=0, family=binomial, refresh = 0)
+
+# print model
+
+print(fit2, digits = 3)
+
+```
+
+```{r graphic, echo = FALSE, include = FALSE, warning = FALSE}
+
+# read in social scores data
+
+social_scores <- read.csv("original-paper/SOCIAL_SCORES.csv")
+
+# extract only Bible alignments
+
+social_scores <- social_scores %>% 
+  filter(sample_group == "KJV_align")
+
+# set index column
+
+social_scores$idu <- as.numeric(row.names(social_scores))
+
+# The authors derive a coefficient from the regression model that indicates the relative "sociality" of a text. 
+# This measure captures how well an individual text conforms to the associations between race, gender, and biblical citation discovered in the overall corpus. For instance, a text by a black writer that frequently quotes the Bible 
+# and only in a “social” way will score high on this scale. Conversely, a text by a white writer who quotes the Bible # frequently in a non-social way will score very low. These scores allow us to pivot between individual works and the # background trends evident in the data, but also to relate them to each other in ways that loosen the link between # text and race as a categorical label.
+
+# The following graphic from the original paper plots the social scores for all texts that cite the Bible:
+
+# plot the results in a ggplot where the x axis is the index and the y axis is the social score
+
+plot <- ggplot(data = social_scores, 
+            aes(x = idu , y = score, label = labeled_points))
+
+# add a line that delineates the x axis 
+
+plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
+  
+  # plot points for each of the observations
+  
+  geom_point(aes(color = highlight), size = 1.2) + 
+  
+  # add text directly to the plot to label points 
+  
+  geom_text_repel(size = 3, nudge_y = .2, nudge_x = -.3) +
+  
+  # set the limits of the axes for readability 
+  
+  scale_y_continuous(limits = c(-1.2, 2.7)) +
+  scale_x_continuous(limits = c(1, 175)) +
+  
+  # add labels and titles 
+  
+  labs(x = "", y = "Social Score", 
+       title="Social Score for All Novels Containing Alignments with the Bible", 
+       caption = "NOTE: Lower scores indicate novels where the Bible is less frequently cited in a 'social' way, as we define the term. \nScores closer to zero indicate novels where the 'social' and 'non-social' contexts are split evenly, as in James Baldwin's \nGo Tell it to the Mountain.\n\n Data obtained from 'Race, Writing, and Computation: Racial Difference and the US Novel' \nby Richard So, Hoyt Long, and Yuancheng Zhu") +
+  
+  # adjust colors of the different points so they're easier to see
+  
+  scale_color_manual(labels = c("yes", "no"), values = c("black", "red")) +
+  
+  # adjust font sizes for readability and aesthetics 
+  
+  theme(legend.position = "", 
+        axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank(), 
+        axis.text=element_text(size=14), 
+        plot.caption = element_text(size = 8))
+
+```
+
+Results from So, Long, and Zhu (2019) were successfully replicated.^[All analysis for this paper is available at my [Github repository](https://github.com/amanda-y-su/race-writing-computation).]
+
+## References
