@@ -59,7 +59,7 @@ I was able to successfully replicate every aspect of the paper.
 
 # read in data from tagged contexts
 
-model_data <- read.csv("original-paper/./TAGGED_CONTEXTS.csv")[,-1]
+model_data <- read.csv("original-paper/raw-data/./TAGGED_CONTEXTS.csv")[,-1]
 
 # create a model that explains social as a function of race, bible, the interaction of race and bible
 # and the random effect of title (novel)
@@ -173,7 +173,7 @@ Whereas @racial decided to perform a maximum likelihood estimation of generalize
 
 # read in data from tagged contexts
 
-model_data <- read.csv("original-paper/./TAGGED_CONTEXTS.csv")[,-1]
+model_data <- read.csv("original-paper/raw-data/./TAGGED_CONTEXTS.csv")[,-1]
 
 # create a model that explains whether or not a the Bible is contextualized in a social way as a 
 # function of the gender of the author, the race of the author, whether or not the Bible was 
@@ -205,7 +205,7 @@ print(fit2, digits = 3)
 
 # read in social scores data
 
-social_scores <- read.csv("original-paper/SOCIAL_SCORES.csv")
+social_scores <- read.csv("original-paper/raw-data/SOCIAL_SCORES.csv")
 
 # extract only Bible alignments
 
