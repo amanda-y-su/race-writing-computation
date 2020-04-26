@@ -199,12 +199,13 @@ This ridges plot visualizes the resulting posterior distributions generated from
 
 ## Conclusion
 
-The first paragraph is a review of the paper you are replicating. 
+To test their theory about novelists of different races producing different narratological effects in their works with respect to the Bible, the authors constructed a mixed model that explains whether or not a text is "social" as a function of the author's gender, race, whether or not they cited the Bible as a control variable, and the interaction of the race and bible variables, also accounting for the random effect of a single novel. Their results conclude black writers who cite the Bible are more likely to cite it in a social context compared to white writers who cite the Bible in their novels.
 
-The second paragraph provides more details on your replications. 
+I successfully replicated all results found by @racial. The authors generously made their data available alongside their paper at Harvard Dataverse.^[@data] I used R^[@R] to complete my replication, which is publically accessible in my Github repository.^[[Github repository](https://github.com/amanda-y-su/race-writing-computation).]
 
-The third and fourth paragraphs are more flexible. Indeed, they might be only one paragraph or they might be several. What did you do? What did you find?
-The final paragraph is different between the Introduction and the Conclusion. In the Introduction, it may not even exist! (We don’t want to be overly didactic here. There are many ways to write a great paper.) Or it may just provide a roadmap to the rest of the paper. In the Conclusion, the last paragraph is where you get to speculate: What does it all mean? What should we research next?
+I extended on @racial by reconstructing the paper's primary model using a Bayesian approach. I use stan_glmer to fit a Bayesian generalized linear mixed effects model with group-specific terms, adding priors on the regression coefficients and priors on the terms of a decomposition of the covariance matrices of the group-specific parameters. My model yielded largely the same results as that of the original model, proving that the original results are even more robust than @racial initially claimed. This corroborates and strengthens their conclusions about how race and writing intersect across more than a century of U.S. fiction.
+
+WHAT DOES IT ALL MEAN? RESEARCH NEXT 
 
 \newpage
 
