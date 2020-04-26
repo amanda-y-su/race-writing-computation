@@ -35,59 +35,40 @@ library(ggridges)
 
 ## Introduction
 
-To test their hypothesis, @racial drew from a larger corpus that was constructed from a list of the most frequently held novels by American authors published between 1880 and 2000 as catalogued by WorldCat. The authors narrowed down the original 6,000 authors represented in the corpus to only those novels written by authors with marked racial identities, labeling the authors by gender and/or only if the author identified in one particular way or if their identity was documented in the scholarly record. The authors then selected novels written by authors who identified as “black” or "African-American" to represent their “corpus of novels by black authors" and created a parallel corpus of “white” writers, which far outnumber black writers in the larger corpus, by selecting works that similarly skewed canonical. They limited this corpus to canonical writers because otherwise our comparison of “white” and “black” writers would be an anarchic comparison of distinguished black writers against a sea of high and low white writers of all genres. To extract the “canonical” writers, they assembled a list of authors from the Norton Anthology of American Literature (2003) and Harold Bloom’s The Western Canon whom they could identify as “white.” The authors then use a sequence alignment method to identify quotations of repetitions of specific lines and phrases to determine textual commonality between texts. Throughout this process, the authors acknowledge several biases in their methods. In selecting the corpus, they omit African-American novels which are not traditionally marked as "novelistic" to maintain the corpus's canonical skew. They also recognize that their crude, provisional identification of authors' racial identities is complicated by the particular exigencies of shifting social and historical circumstance and may have not have any implication on novels written under the sign of such identities. To test their theory about novelists of different races producing different narratological effects in their works with respect to the Bible, the authors constructed a mixed model that explains whether or not a text is "social" as a function of the author's gender, race, whether or not they cited the Bible as a control variable, and the interaction of the race and bible variables, also accounting for the random effect of a single novel. Their results conclude black writers who cite the Bible are more likely to cite it in a social context compared to white writers who cite the Bible in their novels.
+To test their hypothesis, @racial drew from a larger corpus constructed from a list of the most frequently held novels by American authors published between 1880 and 2000 as catalogued by WorldCat. The authors narrowed down the original 6,000 authors represented in the corpus to only those novels written by authors with marked racial identities, labeling the authors only if they identified in one particular way or if their identity was documented in the scholarly record. @racial then selected novels written by authors who identified as “black” or "African-American" to represent their “corpus of novels by black authors" and created a parallel corpus of “white” writers, which far outnumber black writers in the larger corpus, by selecting works that similarly skewed canonical. The authors then use a sequence alignment method to identify quotations of repetitions of specific lines and phrases to determine textual commonality between texts. Throughout this process, the authors acknowledge several biases in their methods. In selecting the corpus, they omit African-American novels which are not traditionally marked as "novelistic" to maintain the corpus's canonical skew because otherwise their comparison of “white” and “black” writers would be an anarchic comparison of distinguished black writers against a sea of high and low white writers of all genres. @racial also recognize that their crude, provisional identification of authors' racial identities is complicated by the particular exigencies of shifting social and historical circumstance and may have not have any implication on novels written under the sign of such identities. To test their theory about novelists of different races producing different narratological effects in their works with respect to the Bible, the authors constructed a mixed model that explains whether or not a text is "social" as a function of the author's gender, race, whether or not they cited the Bible as a control variable, and the interaction of the race and bible variables, also accounting for the random effect of a single novel. Their results conclude black writers who cite the Bible are more likely to cite it in a social context compared to white writers who cite the Bible in their novels.
 
-I was able to replicate all results found by @racial. The authors generously made their data available alongside their paper. CITE ORIGINAL DATA SOurCE ^[I used R citation() to complete my replication, which is publically accessible in my [Github repository](https://github.com/amanda-y-su/race-writing-computation).]
+I was able to replicate all results found by @racial. The authors generously made their data available alongside their paper at Harvard Dataverse.^[@data] I used R^[@R] to complete my replication, which is publically accessible in my Github repository.^[[Github repository](https://github.com/amanda-y-su/race-writing-computation).]
 
-For my extension, I decided to reconstruct the paper's primary model using a Bayesian approach. While the authors used the glmer function to fit a generalized mixed-effects model, I instead use stan_glmer to fit a Bayesian generalized linear mixed effects model with group-specific terms. The Bayesian model addsp riors on the regression coefficients and priors on the terms of a decomposition of the covariance matrices of the group-specific parameters. I found that the results of my model were largely the same the as that of the original, proving that the original results are even more robust than the authors initially claimed. This corroborates and strengthens the author's conclusions about how race and writing intersect across more than a century of U.S. fiction.
+For my extension, I decided to reconstruct the paper's primary model using a Bayesian approach. While the authors used the glmer function to fit a generalized mixed-effects model, I instead use stan_glmer to fit a Bayesian generalized linear mixed effects model with group-specific terms from the rstanarm package.^[@rstanarm] The Bayesian model adds priors on the regression coefficients and priors on the terms of a decomposition of the covariance matrices of the group-specific parameters. I found that the results of my model were largely the same the as that of the original, proving that the original results are even more robust than @racial initially claimed. This corroborates and strengthens their conclusions about how race and writing intersect across more than a century of U.S. fiction.
 
 
 ## Literature Review and Paper Review
 
-Can computational methods tell us anything new and interesting about how racial difference is expressed in literature? Do authors of different racial identifications (for example, “white” versus “black”) consistently use different patterns of language, style, and narrative, and if so, what are these patterns? Do they remain stable or change over time? 
+@racial bridge two scholarly fields historically seen as incompatible: cultural analytics (also known as “computational criticism”) and critical race studies. Cultural analytics is an emerging field wherein humanist scholars leverage the increasing availability of large digital materials and the affordances of new computational tools, allowing them to survey semantic and narratological patterns in the English-language novel at the scale of centuries and across tens-of-thousands of texts. Cultural analytics scholars have explored an expanding array of topics, including genre and cultural prestige, but the topic of race and racial difference has remained relatively understudied. While recent scholarship on the relationship between computation and race has been critique-oriented, pointing to computation’s role in intensifying racial stratification and reinforcing existing patterns of social inequality^[@weapons and @algorithms], @racial seek to determine both computation's affordances and its inadequacies in the study of race and literature. They specifically research whether computational methods can reveal if and how racial difference is expressed in literature — if authors of different racial identifications consistently use different patterns of language, style, and narrative, and if so, what are these patterns? Do they remain stable or change over time?
 
+Generations of traditional literary and religious studies scholars have pointed to the Bible as the basis for the Western cultural imaginary. Traditional scholars of literature and the Bible have long argued that even as the world of the novel has increasingly secularized, its commitment to religious ideas and language has persisted. Canonical literary scholar Northrop Frye conceived the idea of The Great Code to declare the Bible’s universal commonality and significance.^[@bible] A more modern inflection of this trope — “virality” whereby readers and writers are drawn to the language of the Bible due to its allure.^[@romantic] Indeed, the Bible possesses a distinct “resonance” that attracts both white and black writers.
 
-This scholarly project bridges two scholarly fields historically seen as incompatible: cultural analytics (also known as “computational criticism”) and critical race studies. It does so by discovering generative points of contact between data science and critique, two sets of methods typically viewed as antithetical. Cultural analytics is an emerging field wherein humanist scholars leverage the in- creasing availability of large digital materials and the affordances of new computa- tional tools. This allows them to study, for example, semantic and narratological patterns in the English-language novel at the scale of centuries and across tens-of- thousands of texts. While cutural analytics scholars have taken on an expanding array of topics, including genre and cultural prestige, the topic of race and racial difference has remained relatively understudied. Since computational methods demand the quantification of one’s objects of study, it’s likely easier to accept measuring a novel’s popularity by sales figures or classifying its genre by diction than labeling it according to discrete racial identifiers. Such labeling is an affront to critical race studies, the mission of which is the deconstruction of racial categories. As such, recent scholarship on the relationship between computation and race has been critique-oriented. Scholars of science and technology, such as Cathy O’Neil and Safiya A. Noble, have documented how computational algorithms used by banks and online search engines intensify racial stratification and oppression by articulating racial minorities as fixed, quantified types that reinforce existing patterns of social inequality. Tara McPherson has shown that the history of modern computation is deeply intertwined with the history of racial formation in the US since the 1960s. The authors of this paper uses a computational model to study race and literature in order to determine both the model’s affordances and its inadequacies. I make use of @literary, @afro-american, @essays, and @traces.
+@racial seek to unsettle the narrative of the Great Code by excavating differences in how black and white novelists quote the Bible in their works. Their early attempts, however, were unfruitful. First, they assessed whether one group cited the Bible more frequently than the other by randomizing the race labels in their dataset and pulling from them a null distribution of quotation counts. They found that the actual amount of Bible quotation by each group was not significantly different from this null distribution. That is, had we assigned the race labels randomly, we could have expected the same rates of quotation. They then tested whether or not white and black writers cite the Bible at different rates over time, finding that black writers did not explicitly cite the Bible more or less than white writers at any point in time. The authors then examined if novelists were citing different parts of the Bible, noting differences between the ideological orientation of the Old and New Testaments. However, after they analyzed whether chapters from either were being cited at different rates, the results were inconclusive. Then, they questioned if novelists differed in how they cited the Bible, looking to the words surrounding the aligned Bible passages. They could not conclude, however that white and black writers, as a whole, did not use a different vocabulary when invoking the Bible or discuss different topics. 
 
-TO BE EDITED AND COMPLETED
+While not denying the centrality of the Bible in black communities and its frequency of citation among black writers, black studies scholars argue black writers' inovcation of the Bible usually occurs through a process of “critical modification and revision^[@idiom]. This process takes several forms: irony, criticism, and dialogism. The latter refers to the Bible's invocation inciting debate or dialogue over its meaning by a cohort of characters, including potentially the narrator, rather than occuring as a monologic polemic or sermon. Scholars argue that the appearance of the Bible and its quotation in novels by black authors tend to be very dialogic and interactive, whether that is the interaction between characters in the story or the interaction between the reader and the story’s characters, all in an effort to question the Bible’s normative or hegemonic “white” meaning. To uncover this sense of dialogism in Biblical quotation, @racial readjusted their approach to scrutinizing differences between how white and black novelists cite the Bible by looking for moments of sociality, defined as the presence of two or more characters engaged inn a dialogue or interaction.
 
 ## Replication
 
-To test their theory about novelists of different races producing different narratological effects in their works with respect to the Bible, the authors constructed a model that explains whether or not a text is "social" as a function of the author's gender, race, whether or not they cited the Bible as a control variable, the interaction of the race and bible variables, and the random effect for each novel.
+To test their theory about novelists of different races producing different narratological effects in their works with respect to the Bible, @racial constructed a model that explains whether or not a text is "social" as a function of the author's gender, race, whether or not they cited the Bible as a control variable, the interaction of the race and bible variables, and the random effect for each novel.
 
 I was able to successfully replicate every aspect of the paper.
 
 ## Extension
 
-**Table 1: Effect of Author Gender, Race, Bible Citation, and Race and Bible's Interaction on the Sociality of a Text**
+**Table 1: Mixed Model Explaining the Fixed Effects of Author Gender, Race, Bible Citation, Race and Bible's Interaction on the Sociality of a Text and the Random Effect of Single Novels**
 
+&nbsp;
 
-```{r model, results = "asis", message = FALSE}
+```{r mixed-model, message = FALSE, results='asis'}
 
 # read in data from tagged contexts
 
 model_data <- read.csv("original-paper/raw-data/./TAGGED_CONTEXTS.csv")[,-1]
-
-# create a model that explains social as a function of race, bible, the interaction of race and bible
-# I use the function stan_glm 
-
-fit_robust <- stan_glm(social ~ gender + race + bible + race:bible, data=model_data, family=binomial, refresh = 0)
-
-# display the terms of the model in a table
-
-x1 <- tidy(fit_robust) %>%
-  rename(Statistic = term,
-         Mean = estimate,
-         "St. Dev." = std.error)
-
-knitr::kable(x1)
-
-```
-
-**Table 1: Effect of Author Gender, Race, Bible Citation, Race and Bible's Interaction on the Sociality of a Text and the Random Effect of Single Novels**
-
-
-```{r model-2, message = FALSE, results='asis'}
 
 # create a model that explains social as a function of race, bible, the interaction of race and bible
 # and the random effect of title (novel)
@@ -106,30 +87,40 @@ knitr::kable(x2)
 
 ```
 
-**Graphic 1: Distribution of Coefficients on Author Gender, Race, Bible Citation, and the Interaction of the Latter Two**
+&nbsp;
+&nbsp;
+&nbsp;
 
+**Table 2: Fixed Model Explaining the Effect of Author Gender, Race, Bible Citation, and Race and Bible's Interaction on the Sociality of a Text**
 
-```{r plot, results = "asis", message = FALSE}
+&nbsp;
 
-# create a plot that displays the distributions of the coefficients and intercept in the model 
+```{r fixed-model, results = "asis", message = FALSE}
 
-pplot <- plot(fit_robust, "areas", prob = 0.95, prob_outer = 1) + 
-  
-  # add a vertical line to the plot at the x intercept 
-  
-  geom_vline(xintercept = 0) + 
-  
-  # add labels 
-  
-  labs(y = "Terms in the Model", x = "Value", title = "Distributions of Terms in Modified Model", subtitle = "Model explains a text's sociality as a function of author race, gender, \ncitation of Bible, and the interaction of race and bible citation")
+# create a model that explains social as a function of race, bible, the interaction of race and bible
+# I use the function stan_glm 
 
-# display plot 
+fit_robust <- stan_glm(social ~ gender + race + bible + race:bible, data=model_data, family=binomial, refresh = 0)
 
-pplot
+# display the terms of the model in a table
+
+x1 <- tidy(fit_robust) %>%
+  rename(Statistic = term,
+         Mean = estimate,
+         "St. Dev." = std.error)
+
+knitr::kable(x1)
+
 ```
 
-**Graphic 2: Distribution of Predicted Likelihoods of a Text Being Social Given An Author's Race, Gender, and Citation of the Bible in Their Work**
+&nbsp;
+&nbsp;
+&nbsp;
 
+**Graph 1: Distribution of Predicted Likelihoods of a Text Being Social Given An Author's Race, Gender, and Citation of the Bible in Their Work**
+
+&nbsp;
+&nbsp;
 
 ```{r posterior, results = "asis", message = FALSE}
 
@@ -189,7 +180,7 @@ linpred <- posterior_linpred(fit_robust, transform = TRUE, newdata = tibble) %>%
   
   # add titles and labels
   
-  labs(x = "Probability", y = "Condition", title = "Distributions of a Text's Predicted Likelihood \nof Being Assigned as Social Given \nSpecified Conditions")
+  labs(x = "Probability", y = "Condition")
 
 # display plot of predicted probabilities 
 
@@ -197,8 +188,7 @@ linpred
 
 ```
 
-Whereas @racial decided to perform a maximum likelihood estimation of generalized linear models to determine the predicted values of model coefficients, I perform a full Bayesian estimation full Bayesian estimation to find the average expected values for coefficients. @statistical wrote that expected value averages are preferrable to  predicted values because the latter contains both fundamental and estimation uncertainty, whereas the former only has to account for the estimation uncertainty caused by not having an infinite number of observations. As a result, predicted values have a larger variance than expected values. I ultimately found that the primary results of the authors' paper are largely unchanged even when using a Bayesian approach to create the model. 
-
+Whereas @racial decided to perform a maximum likelihood estimation of generalized linear models to determine the predicted values of model coefficients, I perform a full Bayesian estimation to find the average expected values for coefficients. Expected value averages are preferrable to  predicted values because the latter contains both fundamental and estimation uncertainty, whereas the former only has to account for the estimation uncertainty caused by not having an infinite number of observations.^[@statistical} As a result, predicted values have a larger variance than expected values. I ultimately found that the primary results of the authors' paper are largely unchanged even when using a Bayesian approach to create the model. 
 
 ## Conclusion
 
@@ -314,6 +304,6 @@ plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
 
 ```
 
-Results from So, Long, and Zhu (2019) were successfully replicated.^[All analysis for this paper is available at my [Github repository](https://github.com/amanda-y-su/race-writing-computation).]
+Results from @racial were successfully replicated. All analysis for this paper is available at my Github repository^[[Github repository](https://github.com/amanda-y-su/race-writing-computation).]
 
 ![Original Graphic](original-paper/Figures/Fig3.png)
