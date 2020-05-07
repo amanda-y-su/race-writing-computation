@@ -1,7 +1,7 @@
 ---
-title: "Race, Writing, Computation"
+title: "Replication Paper: 'Race, Writing, and Computation: Racial Difference and the US Novel, 1880-2000'"
 author: "Amanda Su"
-date: "4/29/2020"
+date: "5/27/2020"
 output: bookdown::pdf_document2
 bibliography: citation.bib
 link_citations: true
@@ -26,6 +26,7 @@ library(expss)
 library(lme4)
 library(stargazer)
 library(ggridges)
+library(huxtable)
 
 ```
 
@@ -79,11 +80,12 @@ x2 <- tidy(fit_robust_mixed) %>%
          Mean = estimate,
          "St. Dev." = std.error)
 
-knitr::kable(x2)
-
+knitr::kable(x2, format = 'latex', booktabs= TRUE)
 ```
 
 **Table 1:** Mixed Model Explaining the Fixed Effects of Author Gender, Race, Bible Citation, Race and Bible's Interaction on the Sociality of a Text and the Random Effect of Single Novels
+
+&nbsp;
 
 I fit a mixed effects model explaining the fixed effects of an author's gender, race, their citation of the Bible, the interaction between race and Bible, and the random effects of single novels on the sociality of a text. I create a mixed model with "title" added as a random effects variable as @racial did to ensure that no single novel might be contributing a disproportionate amount of Bible quotations and become the source of any specific effect. The “Bible” variable indicates whether the
 Bible is cited or not.Whereas @racial decided to perform a maximum likelihood estimation of generalized linear models to determine the predicted values of model coefficients, I perform a full Bayesian estimation to find the average expected values for coefficients. Expected value averages are preferrable to  predicted values because the latter contains both fundamental and estimation uncertainty, whereas the former only has to account for the estimation uncertainty caused by not having an infinite number of observations.^[@statistical} As a result, predicted values have a larger variance than expected values. I ultimately found that the primary results of the original paper are largely unchanged even when using a Bayesian approach to create the model. Both models show that an author being male, the author being black, and the author citing the Bible negatively affect the sociality of a text while the main coefficient of interest — the interaction of race and bible or the author both being black and citing the bible while controlling for gender — has a positive effect on sociality. 
@@ -106,11 +108,13 @@ x1 <- tidy(fit_robust) %>%
          Mean = estimate,
          "St. Dev." = std.error)
 
-knitr::kable(x1)
+knitr::kable(x1, format = 'latex', booktabs= TRUE) 
 
 ```
 
 **Table 2:** Fixed Model Explaining the Effect of Author Gender, Race, Bible Citation, and Race and Bible's Interaction on the Sociality of a Text
+
+&nbsp;
 
 I fit an additional fixed effects model explaining the effects author's gender, race, their citation of the Bible, the interaction between race and Bible on the sociality of a text without the random effects of single novels. Using stan_glm instead of stan_glmer with random effects allows me to construct the resulting posterior distributions using the model and find the predicted likelihoods of a text being marked as "social" given the following conditions: a white female author not citing the Bible, a white female author citing the Bible, a white male author not citing the Bible, a white male author citing the Bible, a black female author not citing the Bible, a black female author citing the Bible, a black male author not citing the Bible, and a black male author citing the Bible.
 
@@ -198,6 +202,9 @@ I successfully replicated all results found by @racial. The authors generously m
 
 I extended on @racial by reconstructing the paper's primary model using a Bayesian approach. I use stan_glmer to fit a Bayesian generalized linear mixed effects model with group-specific terms, adding priors on the regression coefficients and allowing me to update these initial beliefs in the evidence of new data. My model yielded largely the same results as that of the original model, proving that the original results are even more robust than @racial initially claimed and thus strengthening their conclusions about how an author's race interacts with their writing across more than a century of U.S. fiction.
 
+CONCLUSION PARAGRAPH
+The final paragraph is different between the Introduction and the Conclusion. In the Introduction, it may not even exist! (We don’t want to be overly didactic here. There are many ways to write a great paper.) Or it may just provide a roadmap to the rest of the paper. In the Conclusion, the last paragraph is where you get to speculate: What does it all mean? What should we research next?
+
 \newpage
 
 ## References
@@ -208,39 +215,17 @@ I extended on @racial by reconstructing the paper's primary model using a Bayesi
 
 ## Appendix {-}
 
-```{r model1, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE}
+All results from @racial were successfully replicated. As an example, here is Figure 3 from page 22.
 
-# read in data from tagged contexts
+<p>
+![Plot showing the “social” score for all novels containing alignments with the Bible. Lower scores indicate novels where the Bible is less frequently cited in a “social” way, as we define the term. Scores closer to zero indicate novels where the “social” and “non-social” contexts are split evenly, as in James Baldwin’s Go Tell it to the Mountain.](original-paper/Figures/Fig3.png)
+</p>
 
-model_data <- read.csv("original-paper/raw-data/./TAGGED_CONTEXTS.csv")[,-1]
+*Figure 3*: Plot showing the “social” score for all novels containing alignments with the Bible. Lower scores indicate novels where the Bible is less frequently cited in a “social” way, as we define the term. Scores closer to zero indicate novels where the “social” and “non-social” contexts are split evenly, as in James Baldwin’s Go Tell it to the Mountain.
 
-# create a model that explains whether or not a the Bible is contextualized in a social way as a 
-# function of the gender of the author, the race of the author, whether or not the Bible was 
-# cited, the interaction between the author's gender and the bible variable, the interaction between 
-# the race of the author and bible and the random effect of title (the novel)
+Here is my replication of the figure. All analysis for this paper is available at my Github repository.^[[Github repository](https://github.com/amanda-y-su/race-writing-computation).]
 
-fit1 <- glmer(social ~ gender + race + bible + gender:bible + race:bible + (1|title), nAGQ=0, data=model_data, family=binomial, refresh = 0)
-
-# print model
-
-print(fit1, digits = 3)
-
-```
-
-```{r model2, echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
-
-# create a model that explains social as a function of race, bible, the interaction of race and bible
-# and the random effect of title (novel)
-
-fit2 <- glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, nAGQ=0, family=binomial, refresh = 0)
-
-# print model
-
-print(fit2, digits = 3)
-
-```
-
-```{r graphic, echo = FALSE, include = FALSE, warning = FALSE}
+```{r graphic, echo = FALSE, include = TRUE, warning = FALSE, message = FALSE}
 
 # read in social scores data
 
@@ -285,9 +270,7 @@ plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
   
   # add labels and titles 
   
-  labs(x = "", y = "Social Score", 
-       title="Social Score for All Novels Containing Alignments with the Bible", 
-       caption = "NOTE: Lower scores indicate novels where the Bible is less frequently cited in a 'social' way, as we define the term. \nScores closer to zero indicate novels where the 'social' and 'non-social' contexts are split evenly, as in James Baldwin's \nGo Tell it to the Mountain.\n\n Data obtained from 'Race, Writing, and Computation: Racial Difference and the US Novel' \nby Richard So, Hoyt Long, and Yuancheng Zhu") +
+  labs(x = "", y = "Social Score") +
   
   # adjust colors of the different points so they're easier to see
   
@@ -303,6 +286,36 @@ plot + geom_hline(yintercept = 0, size = 1.2, color = "gray80") +
 
 ```
 
-Results from @racial were successfully replicated. All analysis for this paper is available at my Github repository^[[Github repository](https://github.com/amanda-y-su/race-writing-computation).]
+```{r model1, include = FALSE, echo = FALSE, warning = FALSE, message = FALSE}
 
-![Original Graphic](original-paper/Figures/Fig3.png)
+# read in data from tagged contexts
+
+model_data <- read.csv("original-paper/raw-data/./TAGGED_CONTEXTS.csv")[,-1]
+
+# create a model that explains whether or not a the Bible is contextualized in a social way as a 
+# function of the gender of the author, the race of the author, whether or not the Bible was 
+# cited, the interaction between the author's gender and the bible variable, the interaction between 
+# the race of the author and bible and the random effect of title (the novel)
+
+fit1 <- glmer(social ~ gender + race + bible + gender:bible + race:bible + (1|title), nAGQ=0, data=model_data, family=binomial, refresh = 0)
+
+# print model
+
+print(fit1, digits = 3)
+
+```
+
+```{r model2, echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+
+# create a model that explains social as a function of race, gender, bible, the interaction of race and bible
+# and the random effect of title (novel)
+
+fit2 <- glmer(social ~ gender + race + bible + race:bible + (1|title), data=model_data, nAGQ=0, family=binomial, refresh = 0)
+
+# print model
+
+print(fit2, digits = 3)
+
+```
+
+

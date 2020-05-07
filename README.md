@@ -1,1 +1,3 @@
-# race-writing-computation
+# "Race, Writing, and Computation: Racial Difference and the US Novel, 1880-2000" — Replication and Extension
+
+So, Long, and Zhu (2019) determine that black writers who cite the Bible are more likely to cite it in a social context compared to white writers who cite the Bible in their novels. I was able to successfully replicate the results of their paper. I extended upon their resarch by reconstructing the paper's primary model using a Bayesian approach. I found that the results of the model were largely the same the as that of the original, proving that the original results are even more robust than authors initially claimed. This corroborates and strengthens their conclusions about how race and writing intersect across more than a century of U.S. fiction.
